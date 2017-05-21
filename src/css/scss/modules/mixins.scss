@@ -1,0 +1,57 @@
+// ==========================================================================
+// Mixins
+//
+// Usage:
+// @include mixin-name(value);
+// ==========================================================================
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($data) {
+    -webkit-box-shadow: $data;
+    -moz-box-shadow: $data;
+    -ms-box-shadow: $data;
+    box-shadow: $data;
+}
+
+// rendering: optimizeLegibility
+@mixin text-rendering($type) {
+    -webkit-text-rendering: $type;
+    -moz-text-rendering: $type;
+    -ms-text-rendering: $type;
+    -o-text-rendering: $type;
+    text-rendering: $type;
+}
+
+// font-smoothing: antialiased
+@mixin font-smoothing($type) {
+    -webkit-font-smoothing: $type;
+    -moz-font-smoothing: $type;
+    -ms-font-smoothing: $type;
+    -o-font-smoothing: $type;
+    font-smoothing: $type;
+}
+
+// Cross browser opacity
+// See: http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Full screen background
+// See: https://css-tricks.com/centering-css-complete-guide/
+@mixin fullscreen-bg($path) {
+    background: url($path) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+

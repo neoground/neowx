@@ -1,0 +1,69 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | http://h5bp.com/ */
+
+//
+// What follows is the result of much research on cross-browser styling.
+// Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+// Kroc Camen, and the H5BP dev community and team.
+//
+
+// ==========================================================================
+// Base styles: opinionated defaults
+// ==========================================================================
+
+html,
+button,
+input,
+select,
+textarea {
+    color: $default-text-color;
+}
+
+html {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font;
+    text-align: $text-align;
+    background: $main-bg;
+
+    // Fancy text
+    @include text-rendering(optimizeLegibility);
+    @include font-smoothing(antialiased);
+
+    // Ligatures
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-variant-ligatures: common-ligatures;
+
+    // Kerning
+    font-feature-settings: "kern";
+    font-kerning: normal;
+}
+
+* {
+    // Paddings should not manipulate box width!
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    // Prevent img overflow
+    img {
+        max-width: 100%;
+    }
+}
+
+//
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection rule sets have to be separate.
+// Customize the background color to match your design.
+//
+
+::-moz-selection {
+    background: $selection-color;
+    color: $selection-text-color;
+    text-shadow: none;
+}
+
+::selection {
+    background: $selection-color;
+    color: $selection-text-color;
+    text-shadow: none;
+}

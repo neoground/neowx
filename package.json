@@ -1,0 +1,24 @@
+{
+  "name": "NeoWX",
+  "version": "1.0.0",
+  "description": "NeoWX theme for weewx",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neoground/neowx"
+  },
+  "keywords": [
+    "neowx", "weewx"
+  ],
+  "author": "Sven Reifschneider",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-load-plugins": "*",
+    "gulp-sass": "*",
+    "gulp-uglify": "*"
+  }
+}
