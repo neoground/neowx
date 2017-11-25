@@ -28,6 +28,13 @@
     text-rendering: $type;
 }
 
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
 // font-smoothing: antialiased
 @mixin font-smoothing($type) {
     -webkit-font-smoothing: $type;

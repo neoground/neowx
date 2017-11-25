@@ -8,14 +8,15 @@
     "url": "https://github.com/neoground/neowx"
   },
   "keywords": [
-    "neowx", "weewx"
+    "neowx",
+    "weewx"
   ],
   "author": "Sven Reifschneider",
   "license": "MIT",
   "devDependencies": {
     "gulp": "*",
     "gulp-autoprefixer": "*",
-    "gulp-clean-css": "*",
+    "gulp-clean-css": "^3.9.0",
     "gulp-concat": "*",
     "gulp-load-plugins": "*",
     "gulp-sass": "*",

@@ -3,16 +3,18 @@
 // ==========================================================================
 
 // ***
-// Static
+// Base
 // ***
 
-$main-bg: #f8f8f8;
-$selection-color: #d0e4ef;
+$main-bg:              #f8f8f8;
+$selection-color:      #d0e4ef;
 $selection-text-color: #4a4a4a;
+
 $font-size: 1rem;
 $line-height: 1.6;
 $text-align: center;
 $default-text-color: #212121;
+$main-width: 1200px;
 
 // ***
 // Fonts
@@ -24,11 +26,28 @@ $font: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 // Breakpoints
 // ***
 
-$breakpoint-1: 1200px;
-$breakpoint-2: 750px;
-$breakpoint-3: 500px;
+$breakpoint-1: 1250px;
+$breakpoint-2: 950px;
+$breakpoint-3: 700px;
+$breakpoint-4: 550px;
 
 // ***
 // Colors
 // ***
 
+$header-bg:             #0099BC;
+$nav-bg:                #2D7D9A;
+$header-btn-bg:         #00B7C3;
+$header-btn-bg-hover:   lighten(#00B7C3, 4);
+$header-btn-text:       #FFFFFF;
+$header-btn-text-hover: #FFFFFF;
+$nav-hover-bg:          #00B7C3;
+$nav-active:            #F7630C;
+$nav-text-color:        $m-grey-100;
+$nav-text-color-hover:  $m-grey-50;
+
+$card-header-color:     #68768A;
+
+$footer-bg: #2D7D9A;
+$footer-text: #FFFFFF;
+$footer-link: #F7630C;

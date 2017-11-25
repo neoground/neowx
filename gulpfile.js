@@ -19,7 +19,7 @@ var gulp = require("gulp"),
     /** @type {Array} CSS source files to concatenate and minify */
     cssminSrc = [
         /** Kube */
-        "src/css/kube/kube.min.css",
+        "src/css/kube/kube.css",
         /** Theme style */
         "src/css/main.css"
     ];

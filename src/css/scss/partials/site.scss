@@ -2,3 +2,267 @@
 // Website Style
 // ==========================================================================
 
+.container {
+  width: $main-width;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  display: inline-block;
+
+  background-color: $header-bg;
+  color: #fff;
+
+  .container {
+    display: inline-flex;
+  }
+
+  .title {
+    flex: 1;
+    padding-left: .75rem;
+
+    h2 {
+      margin: 1rem 0 0 0;
+      padding: 0;
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #fff;
+    }
+  }
+
+  .almanac {
+    margin: 1rem 1rem 0 0;
+    width: 25%;
+    color: $m-cyan-50;
+
+    i {
+      font-size: 1.4rem;
+    }
+
+    td {
+      padding: .25rem .5rem;
+    }
+
+    .btn {
+      padding: .25rem .5rem;
+      background: $header-btn-bg;
+      color: $header-btn-text;
+      border-radius: 4px;
+      text-decoration: none;
+
+      @include transition(all .3s);
+
+      &:hover {
+        background: $header-btn-bg-hover;
+        color: $header-btn-text-hover;
+      }
+    }
+
+  }
+
+}
+
+nav {
+  background: $nav-bg;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    display: flex;
+    align-items: stretch;
+
+    li {
+      display: flex;
+      align-items: stretch;
+      text-align: center;
+
+      border-bottom: 4px solid $nav-bg;
+
+      &.active {
+        border-bottom: 4px solid $nav-active;
+      }
+
+      a {
+        display: block;
+        flex: 1 1 auto;
+        height: 100%;
+        padding: 14px .85rem 18px .85rem;
+        text-decoration: none;
+        color: $nav-text-color;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        text-transform: uppercase;
+
+        @include transition(all .2s);
+
+        &:hover {
+          color: $nav-text-color-hover;
+          background: $nav-hover-bg;
+        }
+      }
+    }
+  }
+
+}
+
+// Cards and stuff
+
+main {
+  margin: 2rem 0;
+
+  .row-gutters {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.crd {
+  // Full width because it's wrapped inside a col
+  width: 100%;
+  // Height for equal rows
+  min-height: 100%;
+
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.16), 0 3px 4px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.16), 0 3px 4px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.16), 0 3px 4px rgba(0, 0, 0, 0.23);
+
+  border-radius: 4px;
+
+  background: #fff;
+
+  position: relative;
+
+  h4 {
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    padding: .25rem .75rem;
+    margin: 0;
+    color: $card-header-color;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+
+    i {
+      font-size: 1.4em;
+      width: 1.4em;
+      text-align: center;
+    }
+  }
+
+  .crd-content {
+    width: 100%;
+    display: inline-block;
+    margin: .1rem 0 0 0;
+    padding: .4rem .75rem;
+
+    .weatherdata {
+      font-size: 1.4rem;
+      color: #000;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      display: block;
+
+      i {
+        text-align: center;
+        width: 1.6em;
+        height: 1.4em;
+        font-size: 1.6em;
+      }
+    }
+
+    table.meta {
+      width: 100%;
+      border-collapse: collapse;
+      border: 0;
+      margin: .5rem 0 0 0;
+
+      td {
+        padding: .15rem .4rem .15rem 0;
+        color: $m-grey-400;
+      }
+
+      td:nth-child(2), td:nth-child(3) {
+        text-align: right;
+      }
+
+    }
+  }
+
+}
+
+// Cards for graphs
+.graph-crd {
+  padding: 1rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Modal card
+.modal-crd {
+  width: 50%;
+  padding: 1rem 3rem;
+
+  h2 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: .25rem .75rem;
+    margin: 0;
+    color: $card-header-color;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: left;
+
+    i {
+      font-size: 1.4em;
+      width: 1.4em;
+      text-align: center;
+    }
+  }
+}
+
+// Footer
+footer {
+  background: $footer-bg;
+
+  p {
+    margin: 1rem 0;
+    padding: 0;
+    color: $footer-text;
+  }
+
+  a {
+    color: $footer-link;
+    text-decoration: none;
+
+    @include transition(all .25s);
+
+    &:hover {
+      color: lighten($footer-link, 5);
+    }
+  }
+}

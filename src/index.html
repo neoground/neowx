@@ -13,9 +13,12 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="css/weather-icons/css/weather-icons.min.css" type="text/css">
+    <link rel="stylesheet" href="css/weather-icons/css/weather-icons-wind.min.css" type="text/css">
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <title>$station.location | Weather</title>
@@ -33,15 +36,381 @@
 <body>
 
 <!-- Content -->
-<h1>Hello, world!</h1>
+<header>
+    <div class="container">
+        <div class="title">
 
-<div class="row">
-    <div class="col col-4">4</div>
-    <div class="col col-8">8</div>
+            <h2>Altenstadt, DE</h2>
+            <h3>Live &bull; 25.11.2017 15:33</h3>
+        </div>
+
+            <table class="unstyled almanac">
+                <tr>
+                    <td><i class="wi wi-sunrise"></i></td>
+                    <td>06:15</td>
+                    <td><i class="wi wi-moonrise"></i></td>
+                    <td>18:54</td>
+                </tr>
+                <tr>
+                    <td><i class="wi wi-sunset"></i></td>
+                    <td>22:48</td>
+                    <td><i class="wi wi-moonset"></i></td>
+                    <td>03:14</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a data-fancybox data-src="#almanac" href="javascript:;" class="btn" role="button">more</a></td>
+                    <td><i class="wi wi-moon-alt-waning-gibbous-6"></i></td>
+                    <td>39% full</td>
+                </tr>
+            </table>
+
+    </div>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li class="active"><a href="#">Current</a></li>
+                <li><a href="#">Week</a></li>
+                <li><a href="#">Month</a></li>
+                <li><a href="#">Year</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Maps</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+
+        <!-- Main data -->
+        <div class="row gutters row-gutters">
+            <div class="col col-9">
+
+                <div class="row gutters row-gutters">
+                    <div class="col col-4 crd">
+
+                        <h4><i class="wi wi-thermometer"></i> Outside Temperature</h4>
+
+                        <div class="crd-content">
+                            <span class="weatherdata">13,9°C</span>
+                            <table class="meta">
+                                <tr>
+                                    <td>Hi:</td>
+                                    <td>15,4°C</td>
+                                    <td>(08:30)</td>
+                                </tr>
+                                <tr>
+                                    <td>Lo:</td>
+                                    <td>4,8°C</td>
+                                    <td>(02:15)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col col-4 crd">
+
+                        <h4><i class="wi wi-humidity"></i> Outside Humidity</h4>
+                        <div class="crd-content">
+                            <span class="weatherdata">78%</span>
+                            <table class="meta">
+                                <tr>
+                                    <td>Hi:</td>
+                                    <td>88%</td>
+                                    <td>(08:30)</td>
+                                </tr>
+                                <tr>
+                                    <td>Lo:</td>
+                                    <td>14%</td>
+                                    <td>(02:15)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col col-4 crd">
+
+                        <h4><i class="wi wi-barometer"></i> Barometer</h4>
+                        <div class="crd-content">
+                            <span class="weatherdata">1011,8 hPa</span>
+                            <table class="meta">
+                                <tr>
+                                    <td>Hi:</td>
+                                    <td>1020,9 hPa</td>
+                                    <td>(08:30)</td>
+                                </tr>
+                                <tr>
+                                    <td>Lo:</td>
+                                    <td>988,3 hPa</td>
+                                    <td>(02:15)</td>
+                                </tr>
+                                <tr>
+                                    <td>Trend (3h):</td>
+                                    <td>3 hPa</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row gutters row-gutters">
+                    <div class="col col-4 crd">
+
+                        <h4><i class="wi wi-umbrella"></i> Rain</h4>
+                        <div class="crd-content">
+                            <span class="weatherdata">14,4mm</span>
+                            <table class="meta">
+                                <tr>
+                                    <td>Rain Rate:</td>
+                                    <td>44,8mm/h</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Hi Rain Rate:</td>
+                                    <td>88,9mm/h</td>
+                                    <td>(02:15)</td>
+                                </tr>
+                                <tr>
+                                    <td>Trend (3h):</td>
+                                    <td>3 hPa</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col col-4 crd">
+
+                        <h4><i class="wi wi-thermometer"></i> Inside Temperature</h4>
+                        <div class="crd-content">
+                            <span class="weatherdata">13,9°C</span>
+                            <table class="meta">
+                                <tr>
+                                    <td>Hi:</td>
+                                    <td>15,4°C</td>
+                                    <td>(08:30)</td>
+                                </tr>
+                                <tr>
+                                    <td>Lo:</td>
+                                    <td>4,8°C</td>
+                                    <td>(02:15)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col col-4 crd">
+
+                        <h4><i class="wi wi-humidity"></i> Inside Humidity</h4>
+                        <div class="crd-content">
+                            <span class="weatherdata">78%</span>
+                            <table class="meta">
+                                <tr>
+                                    <td>Hi:</td>
+                                    <td>88%</td>
+                                    <td>(08:30)</td>
+                                </tr>
+                                <tr>
+                                    <td>Lo:</td>
+                                    <td>14%</td>
+                                    <td>(02:15)</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col col-3 crd">
+
+                <h4><i class="wi wi-strong-wind"></i> Wind</h4>
+                <div class="crd-content">
+                    <span class="weatherdata">44 km/h NE <br><i class="wi wi-wind from-203-deg"></i></span>
+                    <table class="meta">
+                        <tr>
+                            <td>Avg:</td>
+                            <td>11 km/h</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Hi:</td>
+                            <td>88 km/h <br> 180° <i class="wi wi-wind from-180-deg"></i></td>
+                            <td>(02:15)</td>
+                        </tr>
+                        <tr>
+                            <td>RMS:</td>
+                            <td>11 km/h</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Vector Avg:</td>
+                            <td>88 km/h <br> 190° <i class="wi wi-wind from-90-deg"></i></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row gutters row-gutters">
+            <div class="col col-3 crd">
+
+                <h4><i class="wi wi-windy"></i> Wind Chill</h4>
+                <div class="crd-content">
+                    <span class="weatherdata">8,4°C</span>
+                    <table class="meta">
+                        <tr>
+                            <td>Lo:</td>
+                            <td>9,4 °C</td>
+                            <td>(08:30)</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="col col-3 crd">
+
+                <h4><i class="wi wi-thermometer-exterior"></i> Dewpoint</h4>
+                <div class="crd-content">
+                    <span class="weatherdata">13,9°C</span>
+                    <table class="meta">
+                        <tr>
+                            <td>Hi:</td>
+                            <td>15,4°C</td>
+                            <td>(08:30)</td>
+                        </tr>
+                        <tr>
+                            <td>Lo:</td>
+                            <td>4,8°C</td>
+                            <td>(02:15)</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="col col-3 crd">
+
+                <h4><i class="wi wi-fire"></i> Heat Index</h4>
+                <div class="crd-content">
+                    <span class="weatherdata">28,4°C</span>
+                    <table class="meta">
+                        <tr>
+                            <td>Hi:</td>
+                            <td>29,4 °C</td>
+                            <td>(08:30)</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="col col-3">
+
+            </div>
+        </div>
+
+        <!-- GRAPHS -->
+
+        <div class="row gutters row-gutters">
+            <div class="col col-6 crd graph-crd">
+                <a data-fancybox="gallery" href="img/graph.png"><img src="img/graph.png"></a>
+            </div>
+            <div class="col col-6 crd graph-crd">
+                <a data-fancybox="gallery" href="img/graph.png"><img src="img/graph.png"></a>
+            </div>
+        </div>
+
+        <div class="row gutters row-gutters">
+            <div class="col col-6 crd graph-crd">
+                <a data-fancybox="gallery" href="img/graph.png"><img src="img/graph.png"></a>
+            </div>
+            <div class="col col-6 crd graph-crd">
+                <a data-fancybox="gallery" href="img/graph.png"><img src="img/graph.png"></a>
+            </div>
+        </div>
+
+        <div class="row gutters row-gutters">
+            <div class="col col-6 crd graph-crd">
+                <a data-fancybox="gallery" href="img/graph.png"><img src="img/graph.png"></a>
+            </div>
+            <div class="col col-6 crd graph-crd">
+                <a data-fancybox="gallery" href="img/graph.png"><img src="img/graph.png"></a>
+            </div>
+        </div>
+        <div class="row gutters row-gutters">
+            <div class="col col-6 crd graph-crd">
+                <a data-fancybox="gallery" href="img/graph.png"><img src="img/graph.png"></a>
+            </div>
+            <div class="col col-6 crd graph-crd">
+                <a data-fancybox="gallery" href="img/graph.png"><img src="img/graph.png"></a>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            &copy; 2017 Sven &bull; Powered by <a href="http://weewx.com" target="_blank">weewx</a>
+            &bull; NeoWX by <a href="https://neoground.com">Neoground</a>
+        </p>
+    </div>
+</footer>
+
+<!-- ALMANAC -->
+
+<div style="display: none;" id="almanac" class="modal-crd">
+    <h2><i class="wi wi-horizon"></i> Almanac</h2>
+    <div class="crd-content">
+        <div class="row gutters">
+            <div class="col-6">
+                <h2>Sun</h2>
+                <table>
+                    <tr><td>Start civil twilight:</td><td>07:15:42</td></tr>
+                    <tr><td>Sunrise</td><td>07:53:09</td></tr>
+                    <tr><td>Transit:</td><td>12:11:18</td></tr>
+                    <tr><td>Sunset:</td><td>16:29:01</td></tr>
+                    <tr><td>End civil twilight:</td><td>17:06:27</td></tr>
+                    <tr><td>Azimuth:</td><td>312.7&deg;</td></tr>
+                    <tr><td>Altitude:</td><td>-53.2&deg;</td></tr>
+                    <tr><td>Right ascension:</td><td>241.8&deg;</td></tr>
+                    <tr><td>Declination:</td><td>-20.9&deg;</td></tr>
+                    <tr><td>Solstice:</td><td>21.12.2017 17:27:48</td></tr>
+                    <tr><td>Equinox:</td><td>20.03.2018 17:15:17</td></tr>
+                </table>
+            </div>
+            <div class="col-6">
+                <h2>Moon</h2>
+                <table>
+                    <tr><td>Rise:</td><td>12:50:08</td></tr>
+                    <tr><td>Transit:</td><td>17:43:40</td></tr>
+                    <tr><td>Set:</td><td>22:43:54</td></tr>
+                    <tr><td>Azimuth:</td><td>243.3&deg;</td></tr>
+                    <tr><td>Altitude:</td><td>2.8&deg;</td></tr>
+                    <tr><td>Right ascension:</td><td>326.4&deg;</td></tr>
+                    <tr><td>Declination:</td><td>-14.6&deg;</td></tr>
+                    <tr><td>Full moon:</td><td>03.12.2017 16:46:59</td></tr>
+                    <tr><td>New moon:</td><td>18.12.2017 07:30:25</td></tr>
+                    <tr><td>Phase:</td><td>First quarter<br />(42% full)</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 
+
+
 <!-- Javascript -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="css/fancybox/jquery.fancybox.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 </html>

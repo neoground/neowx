@@ -7,7 +7,9 @@
 // ==========================================================================
 
 @media only screen and (max-width: $breakpoint-1) and (min-width: $breakpoint-2) {
-
+  .container {
+    width: 900px;
+  }
 }
 
 // ==========================================================================
@@ -15,13 +17,53 @@
 // ==========================================================================
 
 @media only screen and (max-width: $breakpoint-2) and (min-width: $breakpoint-3) {
+  .container {
+    width: 680px;
+  }
 
+  .graph-crd {
+    width: 100% !important;
+  }
 }
 
 // ==========================================================================
 // Breakpoint 3
 // ==========================================================================
 
-@media only screen and (max-width: $breakpoint-3) {
+@media only screen and (max-width: $breakpoint-3) and (min-width: $breakpoint-4) {
+  .container {
+    width: 500px;
+  }
 
+}
+
+// ==========================================================================
+// Breakpoint 4
+// ==========================================================================
+
+@media only screen and (max-width: $breakpoint-4) {
+  .container {
+    width: 100%;
+  }
+
+  nav {
+    overflow-x: scroll;
+  }
+
+  header .title {
+    h2 {
+      margin: 1rem 0 0 0;
+      font-size: 1.25rem;
+    }
+
+    h3 {
+      margin: 0;
+      padding: 0;
+      font-size: .9rem;
+    }
+  }
+
+  header .almanac td, header .almanac i {
+    font-size: .8rem;
+  }
 }
