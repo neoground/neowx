@@ -24,6 +24,19 @@
   .graph-crd {
     width: 100% !important;
   }
+
+  table.meta {
+
+    tr {
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    td:last-child {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 // ==========================================================================
