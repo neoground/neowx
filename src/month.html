@@ -18,8 +18,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="weather-icons/css/weather-icons.min.css" type="text/css">
     <link rel="stylesheet" href="weather-icons/css/weather-icons-wind.min.css" type="text/css">
-    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
 
     <title>Month | $station.location | Weather</title>
 
@@ -40,7 +39,7 @@
     <div class="container">
         <div class="title">
             <h2>$station.location</h2>
-            <h4>$current.dateTime</h4>
+            <h3>$current.dateTime</h3>
         </div>
 
         #if $almanac.hasExtras
@@ -494,10 +493,7 @@
     <div id="data_loading"><i class="loading wi wi-thermometer"></i></div>
 </div>
 
-
-<!-- Javascript -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="css/fancybox/jquery.fancybox.min.js"></script>
-<script src="js/main.min.js"></script>
+<!-- Javascript. jQuery etc. (see gulpfile) included in main.min.js -->
+<script src="main.min.js"></script>
 </body>
 </html>

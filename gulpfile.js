@@ -10,6 +10,8 @@ var gulp = require("gulp"),
     uglifySrc = [
         /** Modernizr */
         "src/js/lib/modernizr.min.js",
+        /** jQuery */
+        "src/js/jquery-3.2.1.min.js",
         /** Kube */
         "src/js/lib/kube.min.js",
         /** Fancybox */
@@ -74,16 +76,16 @@ gulp.task('clean', function() {
 gulp.task('build', ["clean", "styles", "uglify"], function () {
     // Copy img / NOAA / weather-icons dirs
     process.stdout.write("Copying img / NOAA / weather-icons" + '\n');
-    gulp.src('src/img', {base:'src/'}).pipe(gulp.dest("dist/"));
-    gulp.src('src/NOAA', {base:'src/'}).pipe(gulp.dest("dist/"));
-    gulp.src('src/weather-icons', {base:'src/'}).pipe(gulp.dest("dist/"));
+    gulp.src('src/img/**/*', {base:'src/'}).pipe(gulp.dest("dist/"));
+    gulp.src('src/NOAA/*', {base:'src/'}).pipe(gulp.dest("dist/"));
+    gulp.src('src/weather-icons/**/*', {base:'src/'}).pipe(gulp.dest("dist/"));
 
     process.stdout.write("Copying config and style" + '\n');
-    gulp.src('src/*.{conf,css,js,json}', {base:'src/'}).pipe(gulp.dest("dist/"));
+    gulp.src('src/*.{conf,css,js,json,tmpl}', {base:'src/'}).pipe(gulp.dest("dist/"));
 
     // Copy base files with new file extension
     process.stdout.write("Copying base files" + '\n');
-    return gulp.src('src/*.{html,xml}', {base:'src/'})
+    return gulp.src('src/*.html', {base:'src/'})
         .pipe($.rename({extname: ".html.tmpl"}))
         .pipe(gulp.dest("dist/"));
 });
