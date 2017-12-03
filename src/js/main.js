@@ -27,4 +27,12 @@
  */
 jQuery(document).ready(function ($) {
 
+    // Open link in new tab for NOAA archive
+    $(".noaa_link").click(function(e) {
+        e.preventDefault();
+        var url = "NOAA/NOAA-" + $(this).text() + ".txt";
+        var win = window.open(url, '_blank');
+        win.focus();
+    });
+
 });
