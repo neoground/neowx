@@ -37,6 +37,19 @@
       width: 100%;
     }
   }
+
+  .crd .crd-content .weatherdata_small {
+    font-size: 1rem !important;
+  }
+
+  .crd .crd-content .weatherdata_sub {
+    font-size: .85rem;
+    line-height: 1.3;
+  }
+
+  .graph-crd {
+    margin-bottom: 1.5rem;
+  }
 }
 
 // ==========================================================================
@@ -46,6 +59,10 @@
 @media only screen and (max-width: $breakpoint-3) and (min-width: $breakpoint-4) {
   .container {
     width: 500px;
+  }
+
+  .graph-crd {
+    margin-bottom: 1.5rem;
   }
 
 }
@@ -78,5 +95,9 @@
 
   header .almanac td, header .almanac i {
     font-size: .8rem;
+  }
+
+  .graph-crd {
+    margin-bottom: 1.5rem;
   }
 }

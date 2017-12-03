@@ -159,18 +159,19 @@
                         <h4><i class="wi wi-thermometer"></i> $Extras.Translation.out_temp</h4>
 
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.high:</td>
-                                    <td>$year.outTemp.max</td>
-                                    <td>($year.outTemp.maxtime)</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$year.outTemp.min</td>
-                                    <td>($year.outTemp.mintime)</td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high</h4>
+                                    <span class="weatherdata_small">$year.outTemp.max</span>
+                                    <span class="weatherdata_sub">$year.outTemp.maxtime</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.low</h4>
+                                    <span class="weatherdata_small">$year.outTemp.min</span>
+                                    <span class="weatherdata_sub">$year.outTemp.mintime</span>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -178,18 +179,20 @@
 
                         <h4><i class="wi wi-humidity"></i> $Extras.Translation.out_humidity</h4>
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.high:</td>
-                                    <td>$year.outHumidity.max</td>
-                                    <td>($year.outHumidity.maxtime)</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$year.outHumidity.min</td>
-                                    <td>($year.outHumidity.mintime)</td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high</h4>
+                                    <span class="weatherdata_small">$year.outHumidity.max</span>
+                                    <span class="weatherdata_sub">$year.outHumidity.maxtime</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.low</h4>
+                                    <span class="weatherdata_small">$year.outHumidity.min</span>
+                                    <span class="weatherdata_sub">$year.outHumidity.mintime</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -197,23 +200,20 @@
 
                         <h4><i class="wi wi-barometer"></i> $Extras.Translation.barometer</h4>
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.high:</td>
-                                    <td>$year.barometer.max</td>
-                                    <td>($year.barometer.maxtime)</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$year.barometer.min</td>
-                                    <td>($year.barometer.mintime)</td>
-                                </tr>
-                                <tr>
-                                    <td>Trend ($trend.time_delta.hour.format("%.0f")):</td>
-                                    <td>$trend.barometer</td>
-                                    <td></td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high</h4>
+                                    <span class="weatherdata_small">$year.barometer.max</span>
+                                    <span class="weatherdata_sub">$year.barometer.maxtime</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.low</h4>
+                                    <span class="weatherdata_small">$year.barometer.min</span>
+                                    <span class="weatherdata_sub">$year.barometer.mintime</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -224,18 +224,19 @@
 
                         <h4><i class="wi wi-umbrella"></i> $Extras.Translation.rain</h4>
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.rain_total:</td>
-                                    <td>$year.rain.sum</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.high $Extras.Translation.rain_rate:</td>
-                                    <td>$year.rainRate.max</td>
-                                    <td>($year.rainRate.maxtime)</td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.rain_total</h4>
+                                    <span class="weatherdata_small">$year.rain.sum</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high $Extras.Translation.rain_rate</h4>
+                                    <span class="weatherdata_small">$year.rainRate.max</span>
+                                    <span class="weatherdata_sub">$year.rainRate.maxtime</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -243,18 +244,20 @@
 
                         <h4><i class="wi wi-thermometer"></i> $Extras.Translation.inside_temp</h4>
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.high:</td>
-                                    <td>$year.inTemp.max</td>
-                                    <td>($year.inTemp.maxtime)</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$year.inTemp.min</td>
-                                    <td>($year.inTemp.mintime)</td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high</h4>
+                                    <span class="weatherdata_small">$year.inTemp.max</span>
+                                    <span class="weatherdata_sub">$year.inTemp.maxtime</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.low</h4>
+                                    <span class="weatherdata_small">$year.inTemp.min</span>
+                                    <span class="weatherdata_sub">$year.inTemp.mintime</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -262,18 +265,20 @@
 
                         <h4><i class="wi wi-humidity"></i> $Extras.Translation.inside_humid</h4>
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.high:</td>
-                                    <td>$year.inHumidity.max</td>
-                                    <td>($year.inHumidity.maxtime)</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$year.inHumidity.min</td>
-                                    <td>($year.inHumidity.mintime)</td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high</h4>
+                                    <span class="weatherdata_small">$year.inHumidity.max</span>
+                                    <span class="weatherdata_sub">$year.inHumidity.maxtime</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.low</h4>
+                                    <span class="weatherdata_small">$year.inHumidity.min</span>
+                                    <span class="weatherdata_sub">$year.inHumidity.mintime</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -284,28 +289,37 @@
 
                 <h4><i class="wi wi-strong-wind"></i> $Extras.Translation.wind</h4>
                 <div class="crd-content">
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.wind_avg:</td>
-                            <td>$year.wind.avg</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.high:</td>
-                            <td>$year.wind.max<br> $year.wind.gustdir <i class="wi wi-wind from-$year.wind.gustdir.raw-deg"></i></td>
-                            <td>($year.wind.maxtime)</td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.wind_rms:</td>
-                            <td>$year.wind.rms</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.vector_avg:</td>
-                            <td>$year.wind.vecavg<br> $year.wind.vecdir <i class="wi wi-wind from-$year.wind.vecdir.raw-deg"></i></td>
-                            <td></td>
-                        </tr>
-                    </table>
+
+                    <div class="row">
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.wind_avg</h4>
+                            <span class="weatherdata_small">$year.wind.avg</span>
+                        </div>
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.wind_rms</h4>
+                            <span class="weatherdata_small">$year.wind.rms</span>
+                        </div>
+                    </div>
+
+                    <div class="row"><div class="col col-12">&nbsp;</div></div>
+
+                    <div class="row">
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.vector_avg</h4>
+                            <span class="weatherdata_small">
+                                $year.wind.vecavg<br> $year.wind.vecdir <i class="wi wi-wind from-$year.wind.vecdir.raw-deg"></i>
+                            </span>
+                        </div>
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.high</h4>
+                            <span class="weatherdata_small">
+                                $year.wind.max<br>
+                                $year.wind.gustdir <i class="wi wi-wind from-$year.wind.gustdir.raw-deg"></i>
+                            </span>
+                            <span class="weatherdata_sub">$year.wind.maxtime</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -316,13 +330,15 @@
 
                 <h4><i class="wi wi-windy"></i> $Extras.Translation.wind_chill</h4>
                 <div class="crd-content">
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.low:</td>
-                            <td>$year.windchill.min</td>
-                            <td>($year.windchill.mintime)</td>
-                        </tr>
-                    </table>
+
+                    <div class="row">
+                        <div class="col col-12 text-center">
+                            <h4>$Extras.Translation.low</h4>
+                            <span class="weatherdata_small">$year.windchill.min</span>
+                            <span class="weatherdata_sub">$year.windchill.mintime</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -330,18 +346,20 @@
 
                 <h4><i class="wi wi-thermometer-exterior"></i> $Extras.Translation.dewpoint</h4>
                 <div class="crd-content">
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.high:</td>
-                            <td>$year.dewpoint.max</td>
-                            <td>($year.dewpoint.maxtime)</td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.low:</td>
-                            <td>$year.dewpoint.min</td>
-                            <td>($year.dewpoint.mintime)</td>
-                        </tr>
-                    </table>
+
+                    <div class="row">
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.high</h4>
+                            <span class="weatherdata_small">$year.dewpoint.max</span>
+                            <span class="weatherdata_sub">$year.dewpoint.maxtime</span>
+                        </div>
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.low</h4>
+                            <span class="weatherdata_small">$year.dewpoint.min</span>
+                            <span class="weatherdata_sub">$year.dewpoint.mintime</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -349,35 +367,41 @@
 
                 <h4><i class="wi wi-fire"></i> $Extras.Translation.heat_index</h4>
                 <div class="crd-content">
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.high:</td>
-                            <td>$year.heatindex.max</td>
-                            <td>($year.heatindex.maxtime)</td>
-                        </tr>
-                    </table>
+
+                    <div class="row">
+                        <div class="col col-12 text-center">
+                            <h4>$Extras.Translation.high</h4>
+                            <span class="weatherdata_small">$year.heatindex.max</span>
+                            <span class="weatherdata_sub">$year.heatindex.maxtime</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
+            #if $year.UV.has_data
             <div class="col col-3 crd">
-                #if $year.UV.has_data
                 <h4><i class="wi wi-fire"></i> $Extras.Translation.uv</h4>
                 <div class="crd-content">
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.high:</td>
-                            <td>$year.UV.max</td>
-                            <td>($year.UV.maxtime)</td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.low:</td>
-                            <td>$year.UV.min</td>
-                            <td>($year.UV.mintime)</td>
-                        </tr>
-                    </table>
+
+                    <div class="row">
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.high</h4>
+                            <span class="weatherdata_small">$year.UV.max</span>
+                            <span class="weatherdata_sub">$year.UV.maxtime</span>
+                        </div>
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.low</h4>
+                            <span class="weatherdata_small">$year.UV.min</span>
+                            <span class="weatherdata_sub">$year.UV.mintime</span>
+                        </div>
+                    </div>
+
                 </div>
-                #end if
             </div>
+            #else
+            <div class="col col-3"></div>
+            #end if
         </div>
 
         <!-- GRAPHS -->

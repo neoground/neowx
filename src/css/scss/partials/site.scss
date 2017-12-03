@@ -191,6 +191,24 @@ main {
       }
     }
 
+    .weatherdata_small {
+      font-size: 1.15rem;
+      color: #000;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
+
+    .weatherdata_sub {
+      font-size: .95rem;
+      color: #cccccc;
+      width: 100%;
+      text-align: center;
+      display: block;
+      margin-top: .5rem;
+    }
+
     table.meta {
       width: 100%;
       border-collapse: collapse;
@@ -199,7 +217,7 @@ main {
 
       td {
         padding: .15rem .4rem .15rem 0;
-        color: $m-grey-400;
+        color: #cccccc;
       }
 
       td:nth-child(2), td:nth-child(3) {
@@ -225,6 +243,7 @@ main {
     font-weight: 700;
     font-size: 1rem;
     letter-spacing: 1px;
+    line-height: 1.2;
     padding: .25rem 0;
     margin: 0;
     color: $card-header-color;

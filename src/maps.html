@@ -148,11 +148,37 @@
     <div class="container">
 
         <div class="row">
-            <div class="col col-12 crd">
-
-                ToDo
-
+            #if $Extras.has_key('map_1_image_url')
+            <div class="col col-6 crd">
+                <a href="$Extras.map_1_link_url" target="_blank">
+                    <img src="$Extras.map_1_image_url">
+                </a>
             </div>
+            #end if
+            #if $Extras.has_key('map_2_image_url')
+            <div class="col col-6 crd">
+                <a href="$Extras.map_2_link_url" target="_blank">
+                    <img src="$Extras.map_2_image_url">
+                </a>
+            </div>
+            #end if
+        </div>
+
+        <div class="row">
+            #if $Extras.has_key('map_3_image_url')
+            <div class="col col-6 crd">
+                <a href="$Extras.map_3_link_url" target="_blank">
+                    <img src="$Extras.map_3_image_url">
+                </a>
+            </div>
+            #end if
+            #if $Extras.has_key('map_4_image_url')
+            <div class="col col-6 crd">
+                <a href="$Extras.map_4_link_url" target="_blank">
+                    <img src="$Extras.map_4_image_url">
+                </a>
+            </div>
+            #end if
         </div>
 
     </div>

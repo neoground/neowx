@@ -159,18 +159,19 @@
                         <h4><i class="wi wi-thermometer"></i> $Extras.Translation.out_temp</h4>
 
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.high:</td>
-                                    <td>$week.outTemp.max</td>
-                                    <td>($week.outTemp.maxtime)</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$week.outTemp.min</td>
-                                    <td>($week.outTemp.mintime)</td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high</h4>
+                                    <span class="weatherdata_small">$week.outTemp.max</span>
+                                    <span class="weatherdata_sub">$week.outTemp.maxtime</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.low</h4>
+                                    <span class="weatherdata_small">$week.outTemp.min</span>
+                                    <span class="weatherdata_sub">$week.outTemp.mintime</span>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -178,18 +179,20 @@
 
                         <h4><i class="wi wi-humidity"></i> $Extras.Translation.out_humidity</h4>
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.high:</td>
-                                    <td>$week.outHumidity.max</td>
-                                    <td>($week.outHumidity.maxtime)</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$week.outHumidity.min</td>
-                                    <td>($week.outHumidity.mintime)</td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high</h4>
+                                    <span class="weatherdata_small">$week.outHumidity.max</span>
+                                    <span class="weatherdata_sub">$week.outHumidity.maxtime</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.low</h4>
+                                    <span class="weatherdata_small">$week.outHumidity.min</span>
+                                    <span class="weatherdata_sub">$week.outHumidity.mintime</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -197,23 +200,20 @@
 
                         <h4><i class="wi wi-barometer"></i> $Extras.Translation.barometer</h4>
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.high:</td>
-                                    <td>$week.barometer.max</td>
-                                    <td>($week.barometer.maxtime)</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$week.barometer.min</td>
-                                    <td>($week.barometer.mintime)</td>
-                                </tr>
-                                <tr>
-                                    <td>Trend ($trend.time_delta.hour.format("%.0f")):</td>
-                                    <td>$trend.barometer</td>
-                                    <td></td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high</h4>
+                                    <span class="weatherdata_small">$week.barometer.max</span>
+                                    <span class="weatherdata_sub">$week.barometer.maxtime</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.low</h4>
+                                    <span class="weatherdata_small">$week.barometer.min</span>
+                                    <span class="weatherdata_sub">$week.barometer.mintime</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -224,18 +224,19 @@
 
                         <h4><i class="wi wi-umbrella"></i> $Extras.Translation.rain</h4>
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.rain_total:</td>
-                                    <td>$week.rain.sum</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.high $Extras.Translation.rain_rate:</td>
-                                    <td>$week.rainRate.max</td>
-                                    <td>($week.rainRate.maxtime)</td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.rain_total</h4>
+                                    <span class="weatherdata_small">$week.rain.sum</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high $Extras.Translation.rain_rate</h4>
+                                    <span class="weatherdata_small">$week.rainRate.max</span>
+                                    <span class="weatherdata_sub">$week.rainRate.maxtime</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -243,18 +244,20 @@
 
                         <h4><i class="wi wi-thermometer"></i> $Extras.Translation.inside_temp</h4>
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.high:</td>
-                                    <td>$week.inTemp.max</td>
-                                    <td>($week.inTemp.maxtime)</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$week.inTemp.min</td>
-                                    <td>($week.inTemp.mintime)</td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high</h4>
+                                    <span class="weatherdata_small">$week.inTemp.max</span>
+                                    <span class="weatherdata_sub">$week.inTemp.maxtime</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.low</h4>
+                                    <span class="weatherdata_small">$week.inTemp.min</span>
+                                    <span class="weatherdata_sub">$week.inTemp.mintime</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -262,18 +265,20 @@
 
                         <h4><i class="wi wi-humidity"></i> $Extras.Translation.inside_humid</h4>
                         <div class="crd-content">
-                            <table class="meta">
-                                <tr>
-                                    <td>$Extras.Translation.high:</td>
-                                    <td>$week.inHumidity.max</td>
-                                    <td>($week.inHumidity.maxtime)</td>
-                                </tr>
-                                <tr>
-                                    <td>$Extras.Translation.low:</td>
-                                    <td>$week.inHumidity.min</td>
-                                    <td>($week.inHumidity.mintime)</td>
-                                </tr>
-                            </table>
+
+                            <div class="row">
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.high</h4>
+                                    <span class="weatherdata_small">$week.inHumidity.max</span>
+                                    <span class="weatherdata_sub">$week.inHumidity.maxtime</span>
+                                </div>
+                                <div class="col col-6 text-center">
+                                    <h4>$Extras.Translation.low</h4>
+                                    <span class="weatherdata_small">$week.inHumidity.min</span>
+                                    <span class="weatherdata_sub">$week.inHumidity.mintime</span>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -284,28 +289,37 @@
 
                 <h4><i class="wi wi-strong-wind"></i> $Extras.Translation.wind</h4>
                 <div class="crd-content">
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.wind_avg:</td>
-                            <td>$week.wind.avg</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.high:</td>
-                            <td>$week.wind.max<br> $week.wind.gustdir <i class="wi wi-wind from-$week.wind.gustdir.raw-deg"></i></td>
-                            <td>($week.wind.maxtime)</td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.wind_rms:</td>
-                            <td>$week.wind.rms</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.vector_avg:</td>
-                            <td>$week.wind.vecavg<br> $week.wind.vecdir <i class="wi wi-wind from-$week.wind.vecdir.raw-deg"></i></td>
-                            <td></td>
-                        </tr>
-                    </table>
+
+                    <div class="row">
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.wind_avg</h4>
+                            <span class="weatherdata_small">$week.wind.avg</span>
+                        </div>
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.wind_rms</h4>
+                            <span class="weatherdata_small">$week.wind.rms</span>
+                        </div>
+                    </div>
+
+                    <div class="row"><div class="col col-12">&nbsp;</div></div>
+
+                    <div class="row">
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.vector_avg</h4>
+                            <span class="weatherdata_small">
+                                $week.wind.vecavg<br> $week.wind.vecdir <i class="wi wi-wind from-$week.wind.vecdir.raw-deg"></i>
+                            </span>
+                        </div>
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.high</h4>
+                            <span class="weatherdata_small">
+                                $week.wind.max<br>
+                                $week.wind.gustdir <i class="wi wi-wind from-$week.wind.gustdir.raw-deg"></i>
+                            </span>
+                            <span class="weatherdata_sub">$week.wind.maxtime</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -316,13 +330,15 @@
 
                 <h4><i class="wi wi-windy"></i> $Extras.Translation.wind_chill</h4>
                 <div class="crd-content">
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.low:</td>
-                            <td>$week.windchill.min</td>
-                            <td>($week.windchill.mintime)</td>
-                        </tr>
-                    </table>
+
+                    <div class="row">
+                        <div class="col col-12 text-center">
+                            <h4>$Extras.Translation.low</h4>
+                            <span class="weatherdata_small">$week.windchill.min</span>
+                            <span class="weatherdata_sub">$week.windchill.mintime</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -330,18 +346,20 @@
 
                 <h4><i class="wi wi-thermometer-exterior"></i> $Extras.Translation.dewpoint</h4>
                 <div class="crd-content">
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.high:</td>
-                            <td>$week.dewpoint.max</td>
-                            <td>($week.dewpoint.maxtime)</td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.low:</td>
-                            <td>$week.dewpoint.min</td>
-                            <td>($week.dewpoint.mintime)</td>
-                        </tr>
-                    </table>
+
+                    <div class="row">
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.high</h4>
+                            <span class="weatherdata_small">$week.dewpoint.max</span>
+                            <span class="weatherdata_sub">$week.dewpoint.maxtime</span>
+                        </div>
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.low</h4>
+                            <span class="weatherdata_small">$week.dewpoint.min</span>
+                            <span class="weatherdata_sub">$week.dewpoint.mintime</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -349,35 +367,41 @@
 
                 <h4><i class="wi wi-fire"></i> $Extras.Translation.heat_index</h4>
                 <div class="crd-content">
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.high:</td>
-                            <td>$week.heatindex.max</td>
-                            <td>($week.heatindex.maxtime)</td>
-                        </tr>
-                    </table>
+
+                    <div class="row">
+                        <div class="col col-12 text-center">
+                            <h4>$Extras.Translation.high</h4>
+                            <span class="weatherdata_small">$week.heatindex.max</span>
+                            <span class="weatherdata_sub">$week.heatindex.maxtime</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
+            #if $week.UV.has_data
             <div class="col col-3 crd">
-                #if $week.UV.has_data
                 <h4><i class="wi wi-fire"></i> $Extras.Translation.uv</h4>
                 <div class="crd-content">
-                    <table class="meta">
-                        <tr>
-                            <td>$Extras.Translation.high:</td>
-                            <td>$week.UV.max</td>
-                            <td>($week.UV.maxtime)</td>
-                        </tr>
-                        <tr>
-                            <td>$Extras.Translation.low:</td>
-                            <td>$week.UV.min</td>
-                            <td>($week.UV.mintime)</td>
-                        </tr>
-                    </table>
+
+                    <div class="row">
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.high</h4>
+                            <span class="weatherdata_small">$week.UV.max</span>
+                            <span class="weatherdata_sub">$week.UV.maxtime</span>
+                        </div>
+                        <div class="col col-6 text-center">
+                            <h4>$Extras.Translation.low</h4>
+                            <span class="weatherdata_small">$week.UV.min</span>
+                            <span class="weatherdata_sub">$week.UV.mintime</span>
+                        </div>
+                    </div>
+
                 </div>
-                #end if
             </div>
+            #else
+            <div class="col col-3"></div>
+            #end if
         </div>
 
         <!-- GRAPHS -->
