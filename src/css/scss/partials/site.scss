@@ -219,6 +219,17 @@ main {
     width: 100%;
     height: auto;
   }
+
+  // Heading
+  h4 {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: .25rem 0;
+    margin: 0;
+    color: $card-header-color;
+    text-transform: uppercase;
+  }
 }
 
 // Modal card
@@ -265,4 +276,22 @@ footer {
       color: lighten($footer-link, 5);
     }
   }
+}
+
+// Spinner for loading etc.
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading {
+  -webkit-animation: loading 2s infinite linear;
+  animation: loading 2s infinite linear;
 }

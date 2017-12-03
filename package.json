@@ -16,10 +16,12 @@
   "devDependencies": {
     "gulp": "*",
     "gulp-autoprefixer": "*",
+    "gulp-clean": "*",
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "*",
     "gulp-load-plugins": "*",
     "gulp-sass": "*",
-    "gulp-uglify": "*"
+    "gulp-uglify": "*",
+    "gulp-rename": "*"
   }
 }

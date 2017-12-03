@@ -18,9 +18,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="weather-icons/css/weather-icons.min.css" type="text/css">
     <link rel="stylesheet" href="weather-icons/css/weather-icons-wind.min.css" type="text/css">
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
-    <title>$station.location | Weather</title>
+    <title>Year | $station.location | Weather</title>
 
     <!-- Webapp capability -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -93,10 +94,10 @@
     <nav>
         <div class="container">
             <ul>
-                <li class="active"><a href="index.html">Current</a></li>
+                <li><a href="index.html">Current</a></li>
                 <li><a href="week.html">Week</a></li>
                 <li><a href="month.html">Month</a></li>
-                <li><a href="year.html">Year</a></li>
+                <li class="active"><a href="year.html">Year</a></li>
                 <li><a href="archive.html">Archive</a></li>
                 <li><a href="maps.html">Maps</a></li>
             </ul>
@@ -117,17 +118,16 @@
                         <h4><i class="wi wi-thermometer"></i> Outside Temperature</h4>
 
                         <div class="crd-content">
-                            <span class="weatherdata">$current.outTemp</span>
                             <table class="meta">
                                 <tr>
                                     <td>Hi:</td>
-                                    <td>$day.outTemp.max</td>
-                                    <td>($day.outTemp.maxtime)</td>
+                                    <td>$year.outTemp.max</td>
+                                    <td>($year.outTemp.maxtime)</td>
                                 </tr>
                                 <tr>
                                     <td>Lo:</td>
-                                    <td>$day.outTemp.min</td>
-                                    <td>($day.outTemp.mintime)</td>
+                                    <td>$year.outTemp.min</td>
+                                    <td>($year.outTemp.mintime)</td>
                                 </tr>
                             </table>
                         </div>
@@ -137,17 +137,16 @@
 
                         <h4><i class="wi wi-humidity"></i> Outside Humidity</h4>
                         <div class="crd-content">
-                            <span class="weatherdata">$current.outHumidity</span>
                             <table class="meta">
                                 <tr>
                                     <td>Hi:</td>
-                                    <td>$day.outHumidity.max</td>
-                                    <td>($day.outHumidity.maxtime)</td>
+                                    <td>$year.outHumidity.max</td>
+                                    <td>($year.outHumidity.maxtime)</td>
                                 </tr>
                                 <tr>
                                     <td>Lo:</td>
-                                    <td>$day.outHumidity.min</td>
-                                    <td>($day.outHumidity.mintime)</td>
+                                    <td>$year.outHumidity.min</td>
+                                    <td>($year.outHumidity.mintime)</td>
                                 </tr>
                             </table>
                         </div>
@@ -157,17 +156,16 @@
 
                         <h4><i class="wi wi-barometer"></i> Barometer</h4>
                         <div class="crd-content">
-                            <span class="weatherdata">$current.barometer</span>
                             <table class="meta">
                                 <tr>
                                     <td>Hi:</td>
-                                    <td>$day.barometer.max</td>
-                                    <td>($day.barometer.maxtime)</td>
+                                    <td>$year.barometer.max</td>
+                                    <td>($year.barometer.maxtime)</td>
                                 </tr>
                                 <tr>
                                     <td>Lo:</td>
-                                    <td>$day.barometer.min</td>
-                                    <td>($day.barometer.mintime)</td>
+                                    <td>$year.barometer.min</td>
+                                    <td>($year.barometer.mintime)</td>
                                 </tr>
                                 <tr>
                                     <td>Trend ($trend.time_delta.hour.format("%.0f")):</td>
@@ -185,17 +183,16 @@
 
                         <h4><i class="wi wi-umbrella"></i> Rain</h4>
                         <div class="crd-content">
-                            <span class="weatherdata">$day.rain.sum</span>
                             <table class="meta">
                                 <tr>
-                                    <td>Rain Rate:</td>
-                                    <td>$current.rainRate</td>
+                                    <td>Total Rain:</td>
+                                    <td>$year.rain.sum</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td>Hi Rain Rate:</td>
-                                    <td>$day.rainRate.max</td>
-                                    <td>($day.rainRate.maxtime)</td>
+                                    <td>$year.rainRate.max</td>
+                                    <td>($year.rainRate.maxtime)</td>
                                 </tr>
                             </table>
                         </div>
@@ -205,17 +202,16 @@
 
                         <h4><i class="wi wi-thermometer"></i> Inside Temperature</h4>
                         <div class="crd-content">
-                            <span class="weatherdata">$current.inTemp</span>
                             <table class="meta">
                                 <tr>
                                     <td>Hi:</td>
-                                    <td>$day.inTemp.max</td>
-                                    <td>($day.inTemp.maxtime)</td>
+                                    <td>$year.inTemp.max</td>
+                                    <td>($year.inTemp.maxtime)</td>
                                 </tr>
                                 <tr>
                                     <td>Lo:</td>
-                                    <td>$day.inTemp.min</td>
-                                    <td>($day.inTemp.mintime)</td>
+                                    <td>$year.inTemp.min</td>
+                                    <td>($year.inTemp.mintime)</td>
                                 </tr>
                             </table>
                         </div>
@@ -225,17 +221,16 @@
 
                         <h4><i class="wi wi-humidity"></i> Inside Humidity</h4>
                         <div class="crd-content">
-                            <span class="weatherdata">$current.inHumidity</span>
                             <table class="meta">
                                 <tr>
                                     <td>Hi:</td>
-                                    <td>$day.inHumidity.max</td>
-                                    <td>($day.inHumidity.maxtime)</td>
+                                    <td>$year.inHumidity.max</td>
+                                    <td>($year.inHumidity.maxtime)</td>
                                 </tr>
                                 <tr>
                                     <td>Lo:</td>
-                                    <td>$day.inHumidity.min</td>
-                                    <td>($day.inHumidity.mintime)</td>
+                                    <td>$year.inHumidity.min</td>
+                                    <td>($year.inHumidity.mintime)</td>
                                 </tr>
                             </table>
                         </div>
@@ -248,26 +243,25 @@
 
                 <h4><i class="wi wi-strong-wind"></i> Wind</h4>
                 <div class="crd-content">
-                    <span class="weatherdata">$current.windSpeed $current.windDir.ordinal_compass <br><i class="wi wi-wind from-$current.windDir.raw-deg"></i></span>
                     <table class="meta">
                         <tr>
                             <td>Avg:</td>
-                            <td>$day.wind.avg</td>
+                            <td>$year.wind.avg</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Hi:</td>
-                            <td>$day.wind.max<br> $day.wind.gustdir <i class="wi wi-wind from-$day.wind.gustdir.raw-deg"></i></td>
-                            <td>($day.wind.maxtime)</td>
+                            <td>$year.wind.max<br> $year.wind.gustdir <i class="wi wi-wind from-$year.wind.gustdir.raw-deg"></i></td>
+                            <td>($year.wind.maxtime)</td>
                         </tr>
                         <tr>
                             <td>RMS:</td>
-                            <td>$day.wind.rms</td>
+                            <td>$year.wind.rms</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Vector Avg:</td>
-                            <td>$day.wind.vecavg<br> $day.wind.vecdir <i class="wi wi-wind from-$day.wind.vecdir.raw-deg"></i></td>
+                            <td>$year.wind.vecavg<br> $year.wind.vecdir <i class="wi wi-wind from-$year.wind.vecdir.raw-deg"></i></td>
                             <td></td>
                         </tr>
                     </table>
@@ -281,12 +275,11 @@
 
                 <h4><i class="wi wi-windy"></i> Wind Chill</h4>
                 <div class="crd-content">
-                    <span class="weatherdata">$current.windchill</span>
                     <table class="meta">
                         <tr>
                             <td>Lo:</td>
-                            <td>$day.windchill.min</td>
-                            <td>($day.windchill.mintime)</td>
+                            <td>$year.windchill.min</td>
+                            <td>($year.windchill.mintime)</td>
                         </tr>
                     </table>
                 </div>
@@ -296,17 +289,16 @@
 
                 <h4><i class="wi wi-thermometer-exterior"></i> Dewpoint</h4>
                 <div class="crd-content">
-                    <span class="weatherdata">$current.dewpoint</span>
                     <table class="meta">
                         <tr>
                             <td>Hi:</td>
-                            <td>$day.dewpoint.max</td>
-                            <td>($day.dewpoint.maxtime)</td>
+                            <td>$year.dewpoint.max</td>
+                            <td>($year.dewpoint.maxtime)</td>
                         </tr>
                         <tr>
                             <td>Lo:</td>
-                            <td>$day.dewpoint.min</td>
-                            <td>($day.dewpoint.mintime)</td>
+                            <td>$year.dewpoint.min</td>
+                            <td>($year.dewpoint.mintime)</td>
                         </tr>
                     </table>
                 </div>
@@ -316,32 +308,30 @@
 
                 <h4><i class="wi wi-fire"></i> Heat Index</h4>
                 <div class="crd-content">
-                    <span class="weatherdata">$current.heatindex</span>
                     <table class="meta">
                         <tr>
                             <td>Hi:</td>
-                            <td>$day.heatindex.max</td>
-                            <td>($day.heatindex.maxtime)</td>
+                            <td>$year.heatindex.max</td>
+                            <td>($year.heatindex.maxtime)</td>
                         </tr>
                     </table>
                 </div>
 
             </div>
             <div class="col col-3">
-                #if $day.UV.has_data
+                #if $year.UV.has_data
                 <h4><i class="wi wi-fire"></i> UV Index</h4>
                 <div class="crd-content">
-                    <span class="weatherdata">$current.UV</span>
                     <table class="meta">
                         <tr>
                             <td>Hi:</td>
-                            <td>$day.UV.max</td>
-                            <td>($day.UV.maxtime)</td>
+                            <td>$year.UV.max</td>
+                            <td>($year.UV.maxtime)</td>
                         </tr>
                         <tr>
                             <td>Lo:</td>
-                            <td>$day.UV.min</td>
-                            <td>($day.UV.mintime)</td>
+                            <td>$year.UV.min</td>
+                            <td>($year.UV.mintime)</td>
                         </tr>
                     </table>
                 </div>
@@ -354,76 +344,76 @@
         <div class="row gutters row-gutters">
             <div class="col col-6 crd graph-crd">
                 <h4>Temperatures</h4>
-                <a data-fancybox="gallery" href="daytempdew.png"><img src="daytempdew.png"></a>
+                <a data-fancybox="gallery" href="yeartempdew.png"><img src="yeartempdew.png"></a>
             </div>
             <div class="col col-6 crd graph-crd">
                 <h4>Heat & Chill</h4>
-                <a data-fancybox="gallery" href="daytempchill.png"><img src="daytempchill.png"></a>
+                <a data-fancybox="gallery" href="yeartempchill.png"><img src="yeartempchill.png"></a>
             </div>
         </div>
 
         <div class="row gutters row-gutters">
             <div class="col col-6 crd graph-crd">
                 <h4>Barometer</h4>
-                <a data-fancybox="gallery" href="daybarometer.png"><img src="daybarometer.png"></a>
+                <a data-fancybox="gallery" href="yearbarometer.png"><img src="yearbarometer.png"></a>
             </div>
             <div class="col col-6 crd graph-crd">
                 <h4>Rain</h4>
-                <a data-fancybox="gallery" href="dayrain.png"><img src="dayrain.png"></a>
+                <a data-fancybox="gallery" href="yearrain.png"><img src="yearrain.png"></a>
             </div>
         </div>
 
         <div class="row gutters row-gutters">
             <div class="col col-6 crd graph-crd">
                 <h4>Wind</h4>
-                <a data-fancybox="gallery" href="daywind.png"><img src="daywind.png"></a>
+                <a data-fancybox="gallery" href="yearwind.png"><img src="yearwind.png"></a>
             </div>
             <div class="col col-6 crd graph-crd">
                 <h4>Wind Direction</h4>
-                <a data-fancybox="gallery" href="daywinddir.png"><img src="daywinddir.png"></a>
+                <a data-fancybox="gallery" href="yearwinddir.png"><img src="yearwinddir.png"></a>
             </div>
         </div>
 
         <div class="row gutters row-gutters">
             <div class="col col-6 crd graph-crd">
                 <h4>Wind Vector</h4>
-                <a data-fancybox="gallery" href="daywindvec.png"><img src="daywindvec.png"></a>
+                <a data-fancybox="gallery" href="yearwindvec.png"><img src="yearwindvec.png"></a>
             </div>
             <div class="col col-6 crd graph-crd">
                 <h4>Inside</h4>
-                <a data-fancybox="gallery" href="dayinside.png"><img src="dayinside.png"></a>
+                <a data-fancybox="gallery" href="yearinside.png"><img src="yearinside.png"></a>
             </div>
         </div>
 
-        #if $day.radiation.has_data or $day.UV.has_data
+        #if $year.radiation.has_data or $year.UV.has_data
         <div class="row gutters row-gutters">
-            #if $day.radiation.has_data
+            #if $year.radiation.has_data
             <div class="col col-6 crd graph-crd">
                 <h4>Radiation</h4>
-                <a data-fancybox="gallery" href="dayradiation.png"><img src="dayradiation.png"></a>
+                <a data-fancybox="gallery" href="yearradiation.png"><img src="yearradiation.png"></a>
             </div>
             #end if
-            #if $day.UV.has_data
+            #if $year.UV.has_data
             <div class="col col-6 crd graph-crd">
                 <h4>UV Index</h4>
-                <a data-fancybox="gallery" href="dayuv.png"><img src="dayuv.png"></a>
+                <a data-fancybox="gallery" href="yearuv.png"><img src="yearuv.png"></a>
             </div>
             #end if
         </div>
         #end if
 
-        #if $day.rxCheckPercent.has_data or $day.UV.has_data
+        #if $year.rxCheckPercent.has_data or $year.UV.has_data
         <div class="row gutters row-gutters">
-            #if $day.rxCheckPercent.has_data
+            #if $year.rxCheckPercent.has_data
             <div class="col col-6 crd graph-crd">
                 <h4>RX percent</h4>
-                <a data-fancybox="gallery" href="dayrx.png"><img src="dayrx.png"></a>
+                <a data-fancybox="gallery" href="yearrx.png"><img src="yearrx.png"></a>
             </div>
             #end if
-            #if $day.extraTemp1.has_data
+            #if $year.extraTemp1.has_data
             <div class="col col-6 crd graph-crd">
                 <h4>Pond Temperatures</h4>
-                <a data-fancybox="gallery" href="daypond.png"><img src="daypond.png"></a>
+                <a data-fancybox="gallery" href="yearpond.png"><img src="yearpond.png"></a>
             </div>
             #end if
         </div>

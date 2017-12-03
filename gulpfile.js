@@ -12,6 +12,8 @@ var gulp = require("gulp"),
         "src/js/lib/modernizr.min.js",
         /** Kube */
         "src/js/lib/kube.min.js",
+        /** Fancybox */
+        "src/css/fancybox/jquery.fancybox.js",
         /** Page scripts */
         "src/js/main.js"
     ],
@@ -20,6 +22,8 @@ var gulp = require("gulp"),
     cssminSrc = [
         /** Kube */
         "src/css/kube/kube.css",
+        /** Fancybox */
+        "src/css/fancybox/jquery.fancybox.css",
         /** Theme style */
         "src/css/main.css"
     ];
@@ -48,7 +52,7 @@ gulp.task("styles", ["sass"], function () {
         console.error(e);
     })
         .pipe($.cleanCss({compatibility: 'ie8'}))
-        .pipe(gulp.dest("src/css"));
+        .pipe(gulp.dest("src"));
 });
 
 /** Uglify */
@@ -56,13 +60,31 @@ gulp.task("uglify", function () {
     return gulp.src(uglifySrc)
         .pipe($.concat("main.min.js"))
         .pipe($.uglify())
-        .pipe(gulp.dest("src/js"));
+        .pipe(gulp.dest("src"));
+});
+
+/** Clean job */
+gulp.task('clean', function() {
+    // Clean dist dir
+    process.stdout.write("Cleaning dist directory" + '\n');
+    gulp.src('dist', {read: false}).pipe($.clean());
 });
 
 /** Build job */
-gulp.task('build', function () {
-    // TODO
-    return gulp.src('src/')
+gulp.task('build', ["clean", "styles", "uglify"], function () {
+    // Copy img / NOAA / weather-icons dirs
+    process.stdout.write("Copying img / NOAA / weather-icons" + '\n');
+    gulp.src('src/img', {base:'src/'}).pipe(gulp.dest("dist/"));
+    gulp.src('src/NOAA', {base:'src/'}).pipe(gulp.dest("dist/"));
+    gulp.src('src/weather-icons', {base:'src/'}).pipe(gulp.dest("dist/"));
+
+    process.stdout.write("Copying config and style" + '\n');
+    gulp.src('src/*.{conf,css,js,json}', {base:'src/'}).pipe(gulp.dest("dist/"));
+
+    // Copy base files with new file extension
+    process.stdout.write("Copying base files" + '\n');
+    return gulp.src('src/*.{html,xml}', {base:'src/'})
+        .pipe($.rename({extname: ".html.tmpl"}))
         .pipe(gulp.dest("dist/"));
 });
 
@@ -74,7 +96,7 @@ gulp.task("watch", ["styles", "uglify"], function () {
     ], ["styles"]);
 
     /** Watch for JS */
-    gulp.watch(["src/js/{!(lib)/*.js,*.js}", "!src/js/main.min.js"], ["uglify"]);
+    gulp.watch(["src/js/{!(lib)/*.js,*.js}", "!src/main.min.js"], ["uglify"]);
 });
 
 /** Gulp default task */
