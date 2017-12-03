@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="weather-icons/css/weather-icons-wind.min.css" type="text/css">
     <link rel="stylesheet" href="style.css" type="text/css">
 
-    <title>Year | $station.location | Weather</title>
+    <title>$Extras.Translation.title_year | $station.location | $Extras.Translation.title_suffix</title>
 
     <!-- Webapp capability -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -65,7 +65,9 @@
             </tr>
             <tr>
                 <td></td>
-                <td><a data-fancybox data-src="#almanac" href="javascript:;" class="btn" role="button">more</a></td>
+                <td><a data-fancybox data-src="#almanac" href="javascript:;" class="btn" role="button">
+                    $Extras.Translation.more_button
+                </a></td>
                 <td>
                     #if $almanac.moon_phase == "New"
                     <i class="wi wi-moon-new"></i>
@@ -87,7 +89,7 @@
                     <i class="wi wi-moon-waning-crescent-3"></i>
                     #end if
                 </td>
-                <td>$almanac.moon_fullness% full</td>
+                <td>$almanac.moon_fullness% $Extras.Translation.moon_full</td>
             </tr>
         </table>
         #else
@@ -123,7 +125,7 @@
                     <i class="wi wi-moon-waning-crescent-3"></i>
                     #end if
                 </td>
-                <td>$almanac.moon_fullness% full</td>
+                <td>$almanac.moon_fullness% $Extras.Translation.moon_full</td>
             </tr>
         </table>
         #end if
@@ -133,12 +135,12 @@
     <nav>
         <div class="container">
             <ul>
-                <li><a href="index.html">Current</a></li>
-                <li><a href="week.html">Week</a></li>
-                <li><a href="month.html">Month</a></li>
-                <li class="active"><a href="year.html">Year</a></li>
-                <li><a href="archive.html">Archive</a></li>
-                <li><a href="maps.html">Maps</a></li>
+                <li><a href="index.html">$Extras.Translation.title_current</a></li>
+                <li><a href="week.html">$Extras.Translation.title_week</a></li>
+                <li><a href="month.html">$Extras.Translation.title_month</a></li>
+                <li class="active"><a href="year.html">$Extras.Translation.title_year</a></li>
+                <li><a href="archive.html">$Extras.Translation.title_archive</a></li>
+                <li><a href="maps.html">$Extras.Translation.title_maps</a></li>
             </ul>
         </div>
     </nav>
@@ -154,17 +156,17 @@
                 <div class="row gutters row-gutters">
                     <div class="col col-4 crd">
 
-                        <h4><i class="wi wi-thermometer"></i> Outside Temperature</h4>
+                        <h4><i class="wi wi-thermometer"></i> $Extras.Translation.out_temp</h4>
 
                         <div class="crd-content">
                             <table class="meta">
                                 <tr>
-                                    <td>Hi:</td>
+                                    <td>$Extras.Translation.high:</td>
                                     <td>$year.outTemp.max</td>
                                     <td>($year.outTemp.maxtime)</td>
                                 </tr>
                                 <tr>
-                                    <td>Lo:</td>
+                                    <td>$Extras.Translation.low:</td>
                                     <td>$year.outTemp.min</td>
                                     <td>($year.outTemp.mintime)</td>
                                 </tr>
@@ -174,16 +176,16 @@
                     </div>
                     <div class="col col-4 crd">
 
-                        <h4><i class="wi wi-humidity"></i> Outside Humidity</h4>
+                        <h4><i class="wi wi-humidity"></i> $Extras.Translation.out_humidity</h4>
                         <div class="crd-content">
                             <table class="meta">
                                 <tr>
-                                    <td>Hi:</td>
+                                    <td>$Extras.Translation.high:</td>
                                     <td>$year.outHumidity.max</td>
                                     <td>($year.outHumidity.maxtime)</td>
                                 </tr>
                                 <tr>
-                                    <td>Lo:</td>
+                                    <td>$Extras.Translation.low:</td>
                                     <td>$year.outHumidity.min</td>
                                     <td>($year.outHumidity.mintime)</td>
                                 </tr>
@@ -193,16 +195,16 @@
                     </div>
                     <div class="col col-4 crd">
 
-                        <h4><i class="wi wi-barometer"></i> Barometer</h4>
+                        <h4><i class="wi wi-barometer"></i> $Extras.Translation.barometer</h4>
                         <div class="crd-content">
                             <table class="meta">
                                 <tr>
-                                    <td>Hi:</td>
+                                    <td>$Extras.Translation.high:</td>
                                     <td>$year.barometer.max</td>
                                     <td>($year.barometer.maxtime)</td>
                                 </tr>
                                 <tr>
-                                    <td>Lo:</td>
+                                    <td>$Extras.Translation.low:</td>
                                     <td>$year.barometer.min</td>
                                     <td>($year.barometer.mintime)</td>
                                 </tr>
@@ -220,16 +222,16 @@
                 <div class="row gutters row-gutters">
                     <div class="col col-4 crd">
 
-                        <h4><i class="wi wi-umbrella"></i> Rain</h4>
+                        <h4><i class="wi wi-umbrella"></i> $Extras.Translation.rain</h4>
                         <div class="crd-content">
                             <table class="meta">
                                 <tr>
-                                    <td>Total Rain:</td>
+                                    <td>$Extras.Translation.rain_total:</td>
                                     <td>$year.rain.sum</td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td>Hi Rain Rate:</td>
+                                    <td>$Extras.Translation.high $Extras.Translation.rain_rate:</td>
                                     <td>$year.rainRate.max</td>
                                     <td>($year.rainRate.maxtime)</td>
                                 </tr>
@@ -239,16 +241,16 @@
                     </div>
                     <div class="col col-4 crd">
 
-                        <h4><i class="wi wi-thermometer"></i> Inside Temperature</h4>
+                        <h4><i class="wi wi-thermometer"></i> $Extras.Translation.inside_temp</h4>
                         <div class="crd-content">
                             <table class="meta">
                                 <tr>
-                                    <td>Hi:</td>
+                                    <td>$Extras.Translation.high:</td>
                                     <td>$year.inTemp.max</td>
                                     <td>($year.inTemp.maxtime)</td>
                                 </tr>
                                 <tr>
-                                    <td>Lo:</td>
+                                    <td>$Extras.Translation.low:</td>
                                     <td>$year.inTemp.min</td>
                                     <td>($year.inTemp.mintime)</td>
                                 </tr>
@@ -258,16 +260,16 @@
                     </div>
                     <div class="col col-4 crd">
 
-                        <h4><i class="wi wi-humidity"></i> Inside Humidity</h4>
+                        <h4><i class="wi wi-humidity"></i> $Extras.Translation.inside_humid</h4>
                         <div class="crd-content">
                             <table class="meta">
                                 <tr>
-                                    <td>Hi:</td>
+                                    <td>$Extras.Translation.high:</td>
                                     <td>$year.inHumidity.max</td>
                                     <td>($year.inHumidity.maxtime)</td>
                                 </tr>
                                 <tr>
-                                    <td>Lo:</td>
+                                    <td>$Extras.Translation.low:</td>
                                     <td>$year.inHumidity.min</td>
                                     <td>($year.inHumidity.mintime)</td>
                                 </tr>
@@ -280,26 +282,26 @@
             </div>
             <div class="col col-3 crd">
 
-                <h4><i class="wi wi-strong-wind"></i> Wind</h4>
+                <h4><i class="wi wi-strong-wind"></i> $Extras.Translation.wind</h4>
                 <div class="crd-content">
                     <table class="meta">
                         <tr>
-                            <td>Avg:</td>
+                            <td>$Extras.Translation.wind_avg:</td>
                             <td>$year.wind.avg</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>Hi:</td>
+                            <td>$Extras.Translation.high:</td>
                             <td>$year.wind.max<br> $year.wind.gustdir <i class="wi wi-wind from-$year.wind.gustdir.raw-deg"></i></td>
                             <td>($year.wind.maxtime)</td>
                         </tr>
                         <tr>
-                            <td>RMS:</td>
+                            <td>$Extras.Translation.wind_rms:</td>
                             <td>$year.wind.rms</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>Vector Avg:</td>
+                            <td>$Extras.Translation.vector_avg:</td>
                             <td>$year.wind.vecavg<br> $year.wind.vecdir <i class="wi wi-wind from-$year.wind.vecdir.raw-deg"></i></td>
                             <td></td>
                         </tr>
@@ -312,11 +314,11 @@
         <div class="row gutters row-gutters">
             <div class="col col-3 crd">
 
-                <h4><i class="wi wi-windy"></i> Wind Chill</h4>
+                <h4><i class="wi wi-windy"></i> $Extras.Translation.wind_chill</h4>
                 <div class="crd-content">
                     <table class="meta">
                         <tr>
-                            <td>Lo:</td>
+                            <td>$Extras.Translation.low:</td>
                             <td>$year.windchill.min</td>
                             <td>($year.windchill.mintime)</td>
                         </tr>
@@ -326,16 +328,16 @@
             </div>
             <div class="col col-3 crd">
 
-                <h4><i class="wi wi-thermometer-exterior"></i> Dewpoint</h4>
+                <h4><i class="wi wi-thermometer-exterior"></i> $Extras.Translation.dewpoint</h4>
                 <div class="crd-content">
                     <table class="meta">
                         <tr>
-                            <td>Hi:</td>
+                            <td>$Extras.Translation.high:</td>
                             <td>$year.dewpoint.max</td>
                             <td>($year.dewpoint.maxtime)</td>
                         </tr>
                         <tr>
-                            <td>Lo:</td>
+                            <td>$Extras.Translation.low:</td>
                             <td>$year.dewpoint.min</td>
                             <td>($year.dewpoint.mintime)</td>
                         </tr>
@@ -345,11 +347,11 @@
             </div>
             <div class="col col-3 crd">
 
-                <h4><i class="wi wi-fire"></i> Heat Index</h4>
+                <h4><i class="wi wi-fire"></i> $Extras.Translation.heat_index</h4>
                 <div class="crd-content">
                     <table class="meta">
                         <tr>
-                            <td>Hi:</td>
+                            <td>$Extras.Translation.high:</td>
                             <td>$year.heatindex.max</td>
                             <td>($year.heatindex.maxtime)</td>
                         </tr>
@@ -359,16 +361,16 @@
             </div>
             <div class="col col-3 crd">
                 #if $year.UV.has_data
-                <h4><i class="wi wi-fire"></i> UV Index</h4>
+                <h4><i class="wi wi-fire"></i> $Extras.Translation.uv</h4>
                 <div class="crd-content">
                     <table class="meta">
                         <tr>
-                            <td>Hi:</td>
+                            <td>$Extras.Translation.high:</td>
                             <td>$year.UV.max</td>
                             <td>($year.UV.maxtime)</td>
                         </tr>
                         <tr>
-                            <td>Lo:</td>
+                            <td>$Extras.Translation.low:</td>
                             <td>$year.UV.min</td>
                             <td>($year.UV.mintime)</td>
                         </tr>
@@ -382,45 +384,45 @@
 
         <div class="row gutters row-gutters">
             <div class="col col-6 crd graph-crd">
-                <h4>Temperatures</h4>
-                <a data-fancybox="gallery" href="yeartempdew.png"><img src="yeartempdew.png"></a>
+                <h4>$Extras.Translation.temperatures</h4>
+                <a data-fancybox="gallery" href="yeartempdew.png"><img src="yeartempdew.png" alt="$Extras.Translation.temperatures"></a>
             </div>
             <div class="col col-6 crd graph-crd">
-                <h4>Wind Chill & Heat Index</h4>
-                <a data-fancybox="gallery" href="yeartempchill.png"><img src="yeartempchill.png"></a>
-            </div>
-        </div>
-
-        <div class="row gutters row-gutters">
-            <div class="col col-6 crd graph-crd">
-                <h4>Barometer</h4>
-                <a data-fancybox="gallery" href="yearbarometer.png"><img src="yearbarometer.png"></a>
-            </div>
-            <div class="col col-6 crd graph-crd">
-                <h4>Rain</h4>
-                <a data-fancybox="gallery" href="yearrain.png"><img src="yearrain.png"></a>
+                <h4>$Extras.Translation.wind_chill & $Extras.Translation.heat_index</h4>
+                <a data-fancybox="gallery" href="yeartempchill.png"><img src="yeartempchill.png" alt="$Extras.Translation.wind_chill & $Extras.Translation.heat_index"></a>
             </div>
         </div>
 
         <div class="row gutters row-gutters">
             <div class="col col-6 crd graph-crd">
-                <h4>Wind</h4>
-                <a data-fancybox="gallery" href="yearwind.png"><img src="yearwind.png"></a>
+                <h4>$Extras.Translation.barometer</h4>
+                <a data-fancybox="gallery" href="yearbarometer.png"><img src="yearbarometer.png" alt="$Extras.Translation.barometer"></a>
             </div>
             <div class="col col-6 crd graph-crd">
-                <h4>Wind Direction</h4>
-                <a data-fancybox="gallery" href="yearwinddir.png"><img src="yearwinddir.png"></a>
+                <h4>$Extras.Translation.rain</h4>
+                <a data-fancybox="gallery" href="yearrain.png"><img src="yearrain.png" alt="$Extras.Translation.rain"></a>
             </div>
         </div>
 
         <div class="row gutters row-gutters">
             <div class="col col-6 crd graph-crd">
-                <h4>Wind Vector</h4>
-                <a data-fancybox="gallery" href="yearwindvec.png"><img src="yearwindvec.png"></a>
+                <h4>$Extras.Translation.wind</h4>
+                <a data-fancybox="gallery" href="yearwind.png"><img src="yearwind.png" alt="$Extras.Translation.wind"></a>
             </div>
             <div class="col col-6 crd graph-crd">
-                <h4>Inside Temperature</h4>
-                <a data-fancybox="gallery" href="yearinside.png"><img src="yearinside.png"></a>
+                <h4>$Extras.Translation.wind_dir</h4>
+                <a data-fancybox="gallery" href="yearwinddir.png"><img src="yearwinddir.png" alt="$Extras.Translation.wind_dir"></a>
+            </div>
+        </div>
+
+        <div class="row gutters row-gutters">
+            <div class="col col-6 crd graph-crd">
+                <h4>$Extras.Translation.wind_vector</h4>
+                <a data-fancybox="gallery" href="yearwindvec.png"><img src="yearwindvec.png" alt="$Extras.Translation.wind_vector"></a>
+            </div>
+            <div class="col col-6 crd graph-crd">
+                <h4>$Extras.Translation.inside_temp</h4>
+                <a data-fancybox="gallery" href="yearinside.png"><img src="yearinside.png" alt="$Extras.Translation.inside_temp"></a>
             </div>
         </div>
 
@@ -428,14 +430,14 @@
         <div class="row gutters row-gutters">
             #if $year.radiation.has_data
             <div class="col col-6 crd graph-crd">
-                <h4>Radiation</h4>
-                <a data-fancybox="gallery" href="yearradiation.png"><img src="yearradiation.png"></a>
+                <h4>$Extras.Translation.radiation</h4>
+                <a data-fancybox="gallery" href="yearradiation.png"><img src="yearradiation.png" alt="$Extras.Translation.radiation"></a>
             </div>
             #end if
             #if $year.UV.has_data
             <div class="col col-6 crd graph-crd">
-                <h4>UV Index</h4>
-                <a data-fancybox="gallery" href="yearuv.png"><img src="yearuv.png"></a>
+                <h4>$Extras.Translation.uv</h4>
+                <a data-fancybox="gallery" href="yearuv.png"><img src="yearuv.png" alt="$Extras.Translation.uv"></a>
             </div>
             #end if
         </div>
@@ -445,14 +447,14 @@
         <div class="row gutters row-gutters">
             #if $year.rxCheckPercent.has_data
             <div class="col col-6 crd graph-crd">
-                <h4>Signal Quality</h4>
-                <a data-fancybox="gallery" href="yearrx.png"><img src="yearrx.png"></a>
+                <h4>$Extras.Translation.rxcheck</h4>
+                <a data-fancybox="gallery" href="yearrx.png"><img src="yearrx.png" alt="$Extras.Translation.rxcheck"></a>
             </div>
             #end if
             #if $year.extraTemp1.has_data
             <div class="col col-6 crd graph-crd">
-                <h4>Pond Temperatures</h4>
-                <a data-fancybox="gallery" href="yearpond.png"><img src="yearpond.png"></a>
+                <h4>$Extras.Translation.extratemp</h4>
+                <a data-fancybox="gallery" href="yearpond.png"><img src="yearpond.png" alt="$Extras.Translation.extratemp"></a>
             </div>
             #end if
         </div>
@@ -482,46 +484,46 @@
     <div class="crd-content">
         <div class="row gutters">
             <div class="col-6">
-                <h2>Sun</h2>
+                <h2>$Extras.Translation.sun</h2>
                 <table>
-                    <tr><td>Start civil twilight:</td><td>$almanac(horizon=-6).sun(use_center=1).rise</td></tr>
-                    <tr><td>Sunrise</td><td>$almanac.sun.rise.string($sun_None)</td></tr>
-                    <tr><td>Transit:</td><td>$almanac.sun.transit</td></tr>
-                    <tr><td>Sunset:</td><td>$almanac.sun.set.string($sun_None)</td></tr>
-                    <tr><td>End civil twilight:</td><td>$almanac(horizon=-6).sun(use_center=1).set</td></tr>
-                    <tr><td>Azimuth:</td><td>$("%.1f&deg;" % $almanac.sun.az)</td></tr>
-                    <tr><td>Altitude:</td><td>$("%.1f&deg;" % $sun_altitude)</td></tr>
-                    <tr><td>Right ascension:</td><td>$("%.1f&deg;" % $almanac.sun.ra)</td></tr>
-                    <tr><td>Declination:</td><td>$("%.1f&deg;" % $almanac.sun.dec)</td></tr>
+                    <tr><td>$Extras.Translation.start_civil_twilight:</td><td>$almanac(horizon=-6).sun(use_center=1).rise</td></tr>
+                    <tr><td>$Extras.Translation.sunrise</td><td>$almanac.sun.rise.string($sun_None)</td></tr>
+                    <tr><td>$Extras.Translation.transit:</td><td>$almanac.sun.transit</td></tr>
+                    <tr><td>$Extras.Translation.sunset:</td><td>$almanac.sun.set.string($sun_None)</td></tr>
+                    <tr><td>$Extras.Translation.end_civil_twilight:</td><td>$almanac(horizon=-6).sun(use_center=1).set</td></tr>
+                    <tr><td>$Extras.Translation.azimuth:</td><td>$("%.1f&deg;" % $almanac.sun.az)</td></tr>
+                    <tr><td>$Extras.Translation.altitude:</td><td>$("%.1f&deg;" % $sun_altitude)</td></tr>
+                    <tr><td>$Extras.Translation.right_ascension:</td><td>$("%.1f&deg;" % $almanac.sun.ra)</td></tr>
+                    <tr><td>$Extras.Translation.declination:</td><td>$("%.1f&deg;" % $almanac.sun.dec)</td></tr>
                     #if $almanac.next_equinox.raw < $almanac.next_solstice.raw
                     ## The equinox is before the solstice. Display them in order.
-                    <tr><td>Equinox:</td><td>$almanac.next_equinox</td></tr>
-                    <tr><td>Solstice:</td><td>$almanac.next_solstice</td></tr>
+                    <tr><td>$Extras.Translation.equinox:</td><td>$almanac.next_equinox</td></tr>
+                    <tr><td>$Extras.Translation.solstice:</td><td>$almanac.next_solstice</td></tr>
                     #else
                     ## The solstice is before the equinox. Display them in order.
-                    <tr><td>Solstice:</td><td>$almanac.next_solstice</td></tr>
-                    <tr><td>Equinox:</td><td>$almanac.next_equinox</td></tr>
+                    <tr><td>$Extras.Translation.solstice:</td><td>$almanac.next_solstice</td></tr>
+                    <tr><td>$Extras.Translation.equinox:</td><td>$almanac.next_equinox</td></tr>
                     #end if
                 </table>
             </div>
             <div class="col-6">
-                <h2>Moon</h2>
+                <h2>$Extras.Translation.moon</h2>
                 <table>
-                    <tr><td>Rise:</td><td>$almanac.moon.rise</td></tr>
-                    <tr><td>Transit:</td><td>$almanac.moon.transit</td></tr>
-                    <tr><td>Set:</td><td>$almanac.moon.set</td></tr>
-                    <tr><td>Azimuth:</td><td>$("%.1f&deg;" % $almanac.moon.az)</td></tr>
-                    <tr><td>Altitude:</td><td>$("%.1f&deg;" % $almanac.moon.alt)</td></tr>
-                    <tr><td>Right ascension:</td><td>$("%.1f&deg;" % $almanac.moon.ra)</td></tr>
-                    <tr><td>Declination:</td><td>$("%.1f&deg;" % $almanac.moon.dec)</td></tr>
+                    <tr><td>$Extras.Translation.rise:</td><td>$almanac.moon.rise</td></tr>
+                    <tr><td>$Extras.Translation.transit:</td><td>$almanac.moon.transit</td></tr>
+                    <tr><td>$Extras.Translation.set:</td><td>$almanac.moon.set</td></tr>
+                    <tr><td>$Extras.Translation.azimuth:</td><td>$("%.1f&deg;" % $almanac.moon.az)</td></tr>
+                    <tr><td>$Extras.Translation.altitude:</td><td>$("%.1f&deg;" % $almanac.moon.alt)</td></tr>
+                    <tr><td>$Extras.Translation.right_ascension:</td><td>$("%.1f&deg;" % $almanac.moon.ra)</td></tr>
+                    <tr><td>$Extras.Translation.declination:</td><td>$("%.1f&deg;" % $almanac.moon.dec)</td></tr>
                     #if $almanac.next_full_moon.raw < $almanac.next_new_moon.raw
-                    <tr><td>Full moon:</td><td>$almanac.next_full_moon</td></tr>
-                    <tr><td>New moon:</td><td>$almanac.next_new_moon</td></tr>
+                    <tr><td>$Extras.Translation.full_moon:</td><td>$almanac.next_full_moon</td></tr>
+                    <tr><td>$Extras.Translation.new_moon:</td><td>$almanac.next_new_moon</td></tr>
                     #else
-                    <tr><td>New moon:</td><td>$almanac.next_new_moon</td></tr>
-                    <tr><td>Full moon:</td><td>$almanac.next_full_moon</td></tr>
+                    <tr><td>$Extras.Translation.new_moon:</td><td>$almanac.next_new_moon</td></tr>
+                    <tr><td>$Extras.Translation.full_moon:</td><td>$almanac.next_full_moon</td></tr>
                     #end if
-                    <tr><td>Phase:</td><td>$almanac.moon_phase<br />($almanac.moon_fullness% full)</td></tr>
+                    <tr><td>$Extras.Translation.phase:</td><td>$almanac.moon_phase<br />($almanac.moon_fullness% full)</td></tr>
                 </table>
             </div>
         </div>
