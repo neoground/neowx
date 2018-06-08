@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow">
+
+    <meta property="og:site_name" content="$station.location | Weather">
+    <meta property="og:title" content="$station.location | Weather">
+    <meta property="og:description" content="$Extras.description">
+    <meta name="description" content="$Extras.description">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="weather-icons/css/weather-icons.min.css" type="text/css">
+    <link rel="stylesheet" href="weather-icons/css/weather-icons-wind.min.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <title>$Extras.Translation.archive_title | $station.location | $Extras.Translation.title_suffix</title>
+
+    <!-- Webapp capability -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Favicons -->
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/touch-icon-iphone-retina.png">
+</head>
+<body>
+
+<!-- Content -->
+<header>
+    <div class="container">
+        <div class="title">
+            <h2>$station.location</h2>
+            <h3>$current.dateTime</h3>
+        </div>
+
+        #if $almanac.hasExtras
+        ## Extended almanac information is available. Do the full set of tables.
+        #set $sun_altitude = $almanac.sun.alt
+        #if $sun_altitude < 0
+        #set $sun_None="(Always down)"
+        #else
+        #set $sun_None="(Always up)"
+        #end if
+        <table class="unstyled almanac">
+            <tr>
+                <td><i class="wi wi-sunrise"></i></td>
+                <td>$almanac.sun.rise.string($sun_None)</td>
+                <td><i class="wi wi-moonrise"></i></td>
+                <td>$almanac.moon.rise</td>
+            </tr>
+            <tr>
+                <td><i class="wi wi-sunset"></i></td>
+                <td>$almanac.sun.set.string($sun_None)</td>
+                <td><i class="wi wi-moonset"></i></td>
+                <td>$almanac.moon.set</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a data-fancybox data-src="#almanac" href="javascript:;" class="btn" role="button">
+                    $Extras.Translation.more_button
+                </a></td>
+                <td>
+                    #if $almanac.moon_phase == "New"
+                    <i class="wi wi-moon-new"></i>
+                    #else if $almanac.moon_phase == "Waxing crescent"
+                    <i class="wi wi-moon-waxing-crescent-4"></i>
+                    #else if $almanac.moon_phase == "First quarter"
+                    <i class="wi wi-moon-first-quarter"></i>
+                    #else if $almanac.moon_phase == "Waxing gibbous"
+                    <i class="wi wi-moon-waxing-gibbous-4"></i>
+                    #else if $almanac.moon_phase == "Full"
+                    <i class="wi wi-moon-full"></i>
+                    #else if $almanac.moon_phase == "Waning gibbous"
+                    <i class="wi wi-moon-waning-gibbous-4"></i>
+                    #else if $almanac.moon_phase == "Last quarter"
+                    <i class="wi wi-moon-third-quarter"></i>
+                    #else if $almanac.moon_phase == "Waning crescent"
+                    <i class="wi wi-moon-waning-crescent-4"></i>
+                    #else
+                    <i class="wi wi-moon-waning-crescent-3"></i>
+                    #end if
+                </td>
+                <td>$almanac.moon_fullness% $Extras.Translation.moon_full</td>
+            </tr>
+        </table>
+        #else
+        ## No extended almanac information available. Fall back to a simple table.
+        <table class="unstyled almanac">
+            <tr>
+                <td><i class="wi wi-sunrise"></i></td>
+                <td>$almanac.sunrise</td>
+                <td><i class="wi wi-sunset"></i></td>
+                <td>$almanac.sunset</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    #if $almanac.moon_phase == "New"
+                    <i class="wi wi-moon-new"></i>
+                    #else if $almanac.moon_phase == "Waxing crescent"
+                    <i class="wi wi-moon-waxing-crescent-4"></i>
+                    #else if $almanac.moon_phase == "First quarter"
+                    <i class="wi wi-moon-first-quarter"></i>
+                    #else if $almanac.moon_phase == "Waxing gibbous"
+                    <i class="wi wi-moon-waxing-gibbous-4"></i>
+                    #else if $almanac.moon_phase == "Full"
+                    <i class="wi wi-moon-full"></i>
+                    #else if $almanac.moon_phase == "Waning gibbous"
+                    <i class="wi wi-moon-waning-gibbous-4"></i>
+                    #else if $almanac.moon_phase == "Last quarter"
+                    <i class="wi wi-moon-third-quarter"></i>
+                    #else if $almanac.moon_phase == "Waning crescent"
+                    <i class="wi wi-moon-waning-crescent-4"></i>
+                    #else
+                    <i class="wi wi-moon-waning-crescent-3"></i>
+                    #end if
+                </td>
+                <td>$almanac.moon_fullness% $Extras.Translation.moon_full</td>
+            </tr>
+        </table>
+        #end if
+
+    </div>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">$Extras.Translation.title_current</a></li>
+                <li><a href="week.html">$Extras.Translation.title_week</a></li>
+                <li><a href="month.html">$Extras.Translation.title_month</a></li>
+                <li><a href="year.html">$Extras.Translation.title_year</a></li>
+                <li class="active"><a href="archive.html">$Extras.Translation.title_archive</a></li>
+                <li><a href="maps.html">$Extras.Translation.title_maps</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+
+        <div class="row">
+            <div class="col col-12 crd">
+
+                <div class="row">
+                    <div class="col col-6 text-center">
+                        <h4>$Extras.Translation.archive_month</h4>
+                        <ul class="archive">
+                            #for $monthYear in $SummaryByMonth
+                            <li><a href="#" class="noaa_link" target="_blank">$monthYear</a></li>
+                            #end for
+                        </ul>
+                    </div>
+                    <div class="col col-6 text-center">
+                        <h4>$Extras.Translation.archive_year</h4>
+                        <ul class="archive">
+                            #for $yr in $SummaryByYear
+                            <li><a href="#" class="noaa_link" target="_blank">$yr</a></li>
+                            #end for
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            &copy; $current.dateTime.format("%Y")
+            #if $Extras.has_key('you')
+            $Extras.you
+            #end if
+            &bull; Powered by <a href="http://weewx.com" target="_blank">weewx</a> v$station.version
+            &bull; NeoWX by <a href="https://neoground.com" target="_blank">Neoground</a>
+            &bull; Station: $station.hardware
+        </p>
+    </div>
+</footer>
+
+#if $almanac.hasExtras
+<!-- ALMANAC -->
+<!-- ALMANAC -->
+<div style="display: none;" id="almanac" class="modal-crd">
+    <h2><i class="wi wi-horizon"></i> Almanac</h2>
+    <div class="crd-content">
+        <div class="row gutters">
+            <div class="col-6">
+                <h2>$Extras.Translation.sun</h2>
+                <table>
+                    <tr><td>$Extras.Translation.start_civil_twilight:</td><td>$almanac(horizon=-6).sun(use_center=1).rise</td></tr>
+                    <tr><td>$Extras.Translation.sunrise</td><td>$almanac.sun.rise.string($sun_None)</td></tr>
+                    <tr><td>$Extras.Translation.transit:</td><td>$almanac.sun.transit</td></tr>
+                    <tr><td>$Extras.Translation.sunset:</td><td>$almanac.sun.set.string($sun_None)</td></tr>
+                    <tr><td>$Extras.Translation.end_civil_twilight:</td><td>$almanac(horizon=-6).sun(use_center=1).set</td></tr>
+                    <tr><td>$Extras.Translation.azimuth:</td><td>$("%.1f&deg;" % $almanac.sun.az)</td></tr>
+                    <tr><td>$Extras.Translation.altitude:</td><td>$("%.1f&deg;" % $sun_altitude)</td></tr>
+                    <tr><td>$Extras.Translation.right_ascension:</td><td>$("%.1f&deg;" % $almanac.sun.ra)</td></tr>
+                    <tr><td>$Extras.Translation.declination:</td><td>$("%.1f&deg;" % $almanac.sun.dec)</td></tr>
+                    #if $almanac.next_equinox.raw < $almanac.next_solstice.raw
+                    ## The equinox is before the solstice. Display them in order.
+                    <tr><td>$Extras.Translation.equinox:</td><td>$almanac.next_equinox</td></tr>
+                    <tr><td>$Extras.Translation.solstice:</td><td>$almanac.next_solstice</td></tr>
+                    #else
+                    ## The solstice is before the equinox. Display them in order.
+                    <tr><td>$Extras.Translation.solstice:</td><td>$almanac.next_solstice</td></tr>
+                    <tr><td>$Extras.Translation.equinox:</td><td>$almanac.next_equinox</td></tr>
+                    #end if
+                </table>
+            </div>
+            <div class="col-6">
+                <h2>$Extras.Translation.moon</h2>
+                <table>
+                    <tr><td>$Extras.Translation.rise:</td><td>$almanac.moon.rise</td></tr>
+                    <tr><td>$Extras.Translation.transit:</td><td>$almanac.moon.transit</td></tr>
+                    <tr><td>$Extras.Translation.set:</td><td>$almanac.moon.set</td></tr>
+                    <tr><td>$Extras.Translation.azimuth:</td><td>$("%.1f&deg;" % $almanac.moon.az)</td></tr>
+                    <tr><td>$Extras.Translation.altitude:</td><td>$("%.1f&deg;" % $almanac.moon.alt)</td></tr>
+                    <tr><td>$Extras.Translation.right_ascension:</td><td>$("%.1f&deg;" % $almanac.moon.ra)</td></tr>
+                    <tr><td>$Extras.Translation.declination:</td><td>$("%.1f&deg;" % $almanac.moon.dec)</td></tr>
+                    #if $almanac.next_full_moon.raw < $almanac.next_new_moon.raw
+                    <tr><td>$Extras.Translation.full_moon:</td><td>$almanac.next_full_moon</td></tr>
+                    <tr><td>$Extras.Translation.new_moon:</td><td>$almanac.next_new_moon</td></tr>
+                    #else
+                    <tr><td>$Extras.Translation.new_moon:</td><td>$almanac.next_new_moon</td></tr>
+                    <tr><td>$Extras.Translation.full_moon:</td><td>$almanac.next_full_moon</td></tr>
+                    #end if
+                    <tr><td>$Extras.Translation.phase:</td><td>$almanac.moon_phase<br />($almanac.moon_fullness% full)</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+#end if
+
+<div style="display: none;">
+    <div id="data_loading"><i class="loading wi wi-thermometer"></i></div>
+</div>
+
+<!-- Javascript. jQuery etc. (see gulpfile) included in main.min.js -->
+<script src="main.min.js"></script>
+</body>
+</html>
