@@ -5,7 +5,6 @@
   "default_locale": "en",
   "description": "Current weather conditions",
   "display": "standalone",
-  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "img/launcher/launcher-icon-0-75x.png",
