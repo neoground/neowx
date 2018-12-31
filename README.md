@@ -13,7 +13,7 @@ Frequently asked questions are also answered there.
 ## Installation
 
 First download the latest version and put it on your linux machine where weewx is running. Then install it via wee_extension: `wee_extension --install=neowx-1.0.zip`.
-Edit the `weewx.conf` (located in most cases at `/etc/weewx/weex.conf` or `/home/weewx/weewx.conf`) section `[StdReport]` -> `[[StandardReport]]` -> `skin` (ca. line 149) and set `skin = neowx`. Restart weewx `sudo service weewx stop && sudo service weewx start`. 
+Edit the `weewx.conf` (located in most cases at `/etc/weewx/weewx.conf` or `/home/weewx/weewx.conf`) section `[StdReport]` -> `[[StandardReport]]` -> `skin` (ca. line 149) and set `skin = neowx`. Restart weewx `sudo service weewx stop && sudo service weewx start`. 
 
 ## Install fonts
 
