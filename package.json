@@ -1,6 +1,6 @@
 {
-  "name": "NeoWX",
-  "version": "1.0.0",
+  "name": "neowx",
+  "version": "1.2.0",
   "description": "NeoWX theme for weewx",
   "main": "gulpfile.js",
   "repository": {
@@ -14,14 +14,15 @@
   "author": "Sven Reifschneider",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "*",
-    "gulp-autoprefixer": "*",
-    "gulp-clean": "*",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^3.9.0",
-    "gulp-concat": "*",
-    "gulp-load-plugins": "*",
-    "gulp-sass": "*",
-    "gulp-uglify": "*",
-    "gulp-rename": "*"
-  }
+    "gulp-concat": "^2.6.1",
+    "gulp-load-plugins": "^2.0.6",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {}
 }

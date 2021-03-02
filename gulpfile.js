@@ -45,17 +45,12 @@ gulp.task("sass", function () {
 });
 
 /** STYLES */
-gulp.task("styles", ["sass"], function () {
-    var stream = gulp.src(cssminSrc)
+gulp.task("styles", gulp.series('sass', function() {
+    return gulp.src(cssminSrc)
         .pipe($.concat("style.css"))
-        .pipe($.autoprefixer("last 2 version"));
-
-    return stream.on("error", function (e) {
-        console.error(e);
-    })
         .pipe($.cleanCss({compatibility: 'ie8'}))
         .pipe(gulp.dest("src"));
-});
+}));
 
 /** Uglify */
 gulp.task("uglify", function () {
@@ -69,11 +64,11 @@ gulp.task("uglify", function () {
 gulp.task('clean', function() {
     // Clean dist dir
     process.stdout.write("Cleaning dist directory" + '\n');
-    gulp.src('dist', {read: false}).pipe($.clean());
+    return gulp.src('dist', {read: false}).pipe($.clean({allowEmpty: true}));
 });
 
 /** Build job */
-gulp.task('build', ["clean", "styles", "uglify"], function () {
+gulp.task('build', gulp.series('clean', 'styles', 'uglify', function () {
     // Copy img / NOAA / weather-icons dirs
     process.stdout.write("Copying img / NOAA / weather-icons" + '\n');
     gulp.src('src/img/**/*', {base:'src/'}).pipe(gulp.dest("dist/"));
@@ -88,10 +83,10 @@ gulp.task('build', ["clean", "styles", "uglify"], function () {
     return gulp.src('src/*.html', {base:'src/'})
         .pipe($.rename({extname: ".html.tmpl"}))
         .pipe(gulp.dest("dist/"));
-});
+}));
 
 /** Watch task */
-gulp.task("watch", ["styles", "uglify"], function () {
+gulp.task("watch", gulp.series('styles', 'uglify', function () {
     /** Watch for CSS */
     gulp.watch([
         "src/css/scss/**/*.scss"
@@ -99,7 +94,7 @@ gulp.task("watch", ["styles", "uglify"], function () {
 
     /** Watch for JS */
     gulp.watch(["src/js/{!(lib)/*.js,*.js}", "!src/main.min.js"], ["uglify"]);
-});
+}));
 
 /** Gulp default task */
-gulp.task("default", ["watch"]);
+gulp.task("default", gulp.series('watch'));
