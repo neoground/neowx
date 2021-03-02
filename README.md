@@ -1,8 +1,13 @@
 # NeoWX
 
-Welcome to NeoWX - the most advanced weewx theme.
+Welcome to NeoWX - the most advanced weewx theme of 2018.
 
 NeoWX is based on the popular SofaSkin.
+
+## Newer skin available!
+
+Please note: This repository is not actively maintained anymore. We created a new skin with more features and many improvements.
+Find out more: https://neoground.com/projects/neowx-material
 
 ## Documentation
 
