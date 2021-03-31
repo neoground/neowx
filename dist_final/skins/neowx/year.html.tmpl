@@ -70,21 +70,21 @@
                         $Extras.Translation.more_button
                     </a></td>
                     <td>
-                        #if $almanac.moon_phase == "New"
+                        #if $almanac.moon_phase == $almanac.moon_phases[0]
                         <i class="wi wi-moon-new"></i>
-                        #else if $almanac.moon_phase == "Waxing crescent"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[1]
                         <i class="wi wi-moon-waxing-crescent-4"></i>
-                        #else if $almanac.moon_phase == "First quarter"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[2]
                         <i class="wi wi-moon-first-quarter"></i>
-                        #else if $almanac.moon_phase == "Waxing gibbous"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[3]
                         <i class="wi wi-moon-waxing-gibbous-4"></i>
-                        #else if $almanac.moon_phase == "Full"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[4]
                         <i class="wi wi-moon-full"></i>
-                        #else if $almanac.moon_phase == "Waning gibbous"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[5]
                         <i class="wi wi-moon-waning-gibbous-4"></i>
-                        #else if $almanac.moon_phase == "Last quarter"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[6]
                         <i class="wi wi-moon-third-quarter"></i>
-                        #else if $almanac.moon_phase == "Waning crescent"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[7]
                         <i class="wi wi-moon-waning-crescent-4"></i>
                         #else
                         <i class="wi wi-moon-waning-crescent-3"></i>
@@ -108,21 +108,21 @@
                     <td></td>
                     <td></td>
                     <td>
-                        #if $almanac.moon_phase == "New"
+                        #if $almanac.moon_phase == $almanac.moon_phases[0]
                         <i class="wi wi-moon-new"></i>
-                        #else if $almanac.moon_phase == "Waxing crescent"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[1]
                         <i class="wi wi-moon-waxing-crescent-4"></i>
-                        #else if $almanac.moon_phase == "First quarter"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[2]
                         <i class="wi wi-moon-first-quarter"></i>
-                        #else if $almanac.moon_phase == "Waxing gibbous"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[3]
                         <i class="wi wi-moon-waxing-gibbous-4"></i>
-                        #else if $almanac.moon_phase == "Full"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[4]
                         <i class="wi wi-moon-full"></i>
-                        #else if $almanac.moon_phase == "Waning gibbous"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[5]
                         <i class="wi wi-moon-waning-gibbous-4"></i>
-                        #else if $almanac.moon_phase == "Last quarter"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[6]
                         <i class="wi wi-moon-third-quarter"></i>
-                        #else if $almanac.moon_phase == "Waning crescent"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[7]
                         <i class="wi wi-moon-waning-crescent-4"></i>
                         #else
                         <i class="wi wi-moon-waning-crescent-3"></i>

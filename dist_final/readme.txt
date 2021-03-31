@@ -1,4 +1,5 @@
 neowx - the most advanced weewx skin
+Version 1.2
 
 
 Installation instructions

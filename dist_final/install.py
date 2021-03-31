@@ -9,9 +9,9 @@ def loader():
 class BasicInstaller(ExtensionInstaller):
     def __init__(self):
         super(BasicInstaller, self).__init__(
-            version="1.0",
+            version="1.2",
             name='neowx',
-            description='The most advanced weewx skin.',
+            description='The most advanced weewx skin of 2018.',
             author="Sven Reifschneider",
             author_email="sven@neoground.com",
             config={

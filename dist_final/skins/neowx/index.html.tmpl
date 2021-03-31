@@ -71,21 +71,21 @@
                         $Extras.Translation.more_button
                     </a></td>
                     <td>
-                        #if $almanac.moon_phase == "New"
+                        #if $almanac.moon_phase == $almanac.moon_phases[0]
                         <i class="wi wi-moon-new"></i>
-                        #else if $almanac.moon_phase == "Waxing crescent"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[1]
                         <i class="wi wi-moon-waxing-crescent-4"></i>
-                        #else if $almanac.moon_phase == "First quarter"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[2]
                         <i class="wi wi-moon-first-quarter"></i>
-                        #else if $almanac.moon_phase == "Waxing gibbous"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[3]
                         <i class="wi wi-moon-waxing-gibbous-4"></i>
-                        #else if $almanac.moon_phase == "Full"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[4]
                         <i class="wi wi-moon-full"></i>
-                        #else if $almanac.moon_phase == "Waning gibbous"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[5]
                         <i class="wi wi-moon-waning-gibbous-4"></i>
-                        #else if $almanac.moon_phase == "Last quarter"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[6]
                         <i class="wi wi-moon-third-quarter"></i>
-                        #else if $almanac.moon_phase == "Waning crescent"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[7]
                         <i class="wi wi-moon-waning-crescent-4"></i>
                         #else
                         <i class="wi wi-moon-waning-crescent-3"></i>
@@ -109,21 +109,21 @@
                     <td></td>
                     <td></td>
                     <td>
-                        #if $almanac.moon_phase == "New"
+                        #if $almanac.moon_phase == $almanac.moon_phases[0]
                         <i class="wi wi-moon-new"></i>
-                        #else if $almanac.moon_phase == "Waxing crescent"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[1]
                         <i class="wi wi-moon-waxing-crescent-4"></i>
-                        #else if $almanac.moon_phase == "First quarter"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[2]
                         <i class="wi wi-moon-first-quarter"></i>
-                        #else if $almanac.moon_phase == "Waxing gibbous"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[3]
                         <i class="wi wi-moon-waxing-gibbous-4"></i>
-                        #else if $almanac.moon_phase == "Full"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[4]
                         <i class="wi wi-moon-full"></i>
-                        #else if $almanac.moon_phase == "Waning gibbous"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[5]
                         <i class="wi wi-moon-waning-gibbous-4"></i>
-                        #else if $almanac.moon_phase == "Last quarter"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[6]
                         <i class="wi wi-moon-third-quarter"></i>
-                        #else if $almanac.moon_phase == "Waning crescent"
+                        #else if $almanac.moon_phase == $almanac.moon_phases[7]
                         <i class="wi wi-moon-waning-crescent-4"></i>
                         #else
                         <i class="wi wi-moon-waning-crescent-3"></i>
@@ -462,7 +462,7 @@
         </div>
         #end if
 
-        #if $day.rxCheckPercent.has_data or $day.UV.has_data
+        #if $day.rxCheckPercent.has_data or $day.extraTemp1.has_data
         <div class="row gutters row-gutters">
             #if $day.rxCheckPercent.has_data
             <div class="col col-6 crd graph-crd">
@@ -478,6 +478,13 @@
             #end if
         </div>
         #end if
+        
+        <div class="row gutters row-gutters">
+            <div class="col col-6 crd graph-crd">
+                <h4>$Extras.Translation.out_humidity</h4>
+                <a data-fancybox="gallery" href="dayhumidity.png"><img src="dayhumidity.png" alt="$Extras.Translation.out_humidity"></a>
+            </div>
+        </div>
 
     </div>
 </main>
@@ -542,7 +549,7 @@
                     <tr><td>$Extras.Translation.new_moon:</td><td>$almanac.next_new_moon</td></tr>
                     <tr><td>$Extras.Translation.full_moon:</td><td>$almanac.next_full_moon</td></tr>
                     #end if
-                    <tr><td>$Extras.Translation.phase:</td><td>$almanac.moon_phase<br />($almanac.moon_fullness% full)</td></tr>
+                    <tr><td>$Extras.Translation.phase:</td><td>$almanac.moon_phase<br />($almanac.moon_fullness% $Extras.Translation.moon_full)</td></tr>
                 </table>
             </div>
         </div>

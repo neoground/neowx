@@ -9,9 +9,11 @@ NeoWX is based on the popular SofaSkin.
 Please note: This repository is not actively maintained anymore. We created a new skin with more features and many improvements.
 Find out more: https://neoground.com/projects/neowx-material
 
+The current release (1.2) is the final release of NeoWX.
+
 ## Documentation
 
-Have a look at the web site: https://projects.neoground.com/neowx
+Have a look at the website: https://projects.neoground.com/neowx
 
 Frequently asked questions are also answered there.
 
